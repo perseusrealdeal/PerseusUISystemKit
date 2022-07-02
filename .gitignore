@@ -24,6 +24,7 @@ DerivedData/
 
 ## Other
 .DS_Store
+swiftlint.txt
 
 ## Obj-C/Swift specific
 *.hmap
