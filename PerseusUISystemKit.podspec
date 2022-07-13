@@ -16,4 +16,6 @@ p.requires_arc   = true
 
 p.source_files   = 'Sources/**/*.swift'
 
+p.dependency       'PerseusDarkMode', '= 1.0.3'
+
 end
