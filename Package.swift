@@ -13,11 +13,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "Perseus UISystemKit",
+    name: "PerseusUISystemKit",
     platforms: [.iOS(.v9)],
     products: [
         .library(
-            name: "Perseus UISystemKit",
+            name: "PerseusUISystemKit",
             targets: ["PerseusUISystemKit"])
     ],
     dependencies: [
