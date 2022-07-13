@@ -9,7 +9,7 @@
 //
 
 import UIKit
-
+import PerseusDarkMode
 /// Creates the instance of UIColor using RGBA color model.
 ///
 /// ```swift
@@ -52,4 +52,8 @@ public extension UIColor {
 
         return (red*255, green*255, blue*255, alpha)
     }
+}
+
+extension UIColor {
+    internal static var _iOS13InUseAndHigherOnly: Bool = true
 }

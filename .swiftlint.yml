@@ -1,0 +1,11 @@
+identifier_name:
+  allowed_symbols: "_"
+
+large_tuple:
+  warning: 4
+  error: 5
+
+type_body_length:
+  warning: 400
+
+reporter: "xcode" # reporter type
