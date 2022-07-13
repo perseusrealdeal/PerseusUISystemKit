@@ -4,6 +4,7 @@
  Created by Mikhail Zhigulin in 2022.
 
  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+ Licensed under the MIT license. See LICENSE file.
  All rights reserved.
 
  Abstract:
@@ -22,7 +23,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusDarkMode.git",
-            .branch("v1.0.3_test"))
+            .exact("1.0.3"))
     ],
     targets: [
         .target(
