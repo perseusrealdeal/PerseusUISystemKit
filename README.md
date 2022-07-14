@@ -14,7 +14,7 @@ Have a look of demo app, source code is [here](https://github.com/perseusrealdea
 
 [![Standalone File](https://img.shields.io/badge/Standalone%20File-available-red.svg)]()
 [![Demo App](https://img.shields.io/badge/Demo%20App-available-ff6964.svg)](https://github.com/perseusrealdeal/ios.darkmode.discovery.git)
-[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.0.3-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.0.3)
+[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.0.4-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.0.4)
 
 # Table of contents
 

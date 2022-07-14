@@ -2,7 +2,7 @@
 //  PerseusUISystemKitSingle.swift
 //  Version: 1.0.0
 //
-//  Contains Dependency PerseusDarkModeSingle v1.0.3
+//  Contains Dependency PerseusDarkModeSingle v1.0.4
 //
 //  Created by Mikhail Zhigulin in 2022.
 //
@@ -35,7 +35,7 @@
 
 import UIKit
 
-// MARK: - PerseusDarkModeSingle v1.0.3
+// MARK: - PerseusDarkModeSingle v1.0.4
 
 // MARK: - Constants
 
@@ -343,6 +343,8 @@ public enum SystemStyle: Int, CustomStringConvertible {
         }
     }
 }
+
+// MARK: - Helpers
 
 extension UserDefaults {
     public func valueExists(forKey key: String) -> Bool {
