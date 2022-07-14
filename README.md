@@ -8,11 +8,10 @@ Perseus UISystemKit
 [![Swift 5.3](https://img.shields.io/badge/Swift-5.3-red.svg)](https://docs.swift.org/swift-book/RevisionHistory/RevisionHistory.html)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-informational.svg)](https://github.com/apple/swift-package-manager)
 [![CocoaPods manager](https://img.shields.io/badge/CocoaPods%20Manager-compatible-informational.svg)](https://cocoapods.org)
-[![Carthage manager](https://img.shields.io/badge/Carthage%20Manager-compatible-informational.svg)](https://github.com/Carthage/Carthage)
 [![License](http://img.shields.io/:License-MIT-blue.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/22c836dd71cb774bf5f7ecdb5a3b22f0f87357be/LICENSE)
 
 Have a look of demo app, source code is [here](https://github.com/perseusrealdeal/ios.darkmode.discovery.git).
 
 [![Standalone File](https://img.shields.io/badge/Standalone%20File-available-red.svg)]()
 [![Demo App](https://img.shields.io/badge/Demo%20App-available-ff6964.svg)](https://github.com/perseusrealdeal/ios.darkmode.discovery.git)
-[![PerseusDarkMode](http://img.shields.io/:BasedOn-PerseusDarkMode-violet.svg)](https://github.com/perseusrealdeal/PerseusDarkMode.git)
+[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.0.3-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.0.3)
