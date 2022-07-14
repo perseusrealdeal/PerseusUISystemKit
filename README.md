@@ -12,7 +12,7 @@ Perseus UISystemKit
 
 Have a look of demo app, source code is [here](https://github.com/perseusrealdeal/ios.darkmode.discovery.git).
 
-[![Standalone File](https://img.shields.io/badge/Standalone%20File-available-red.svg)]()
+[![Standalone File](https://img.shields.io/badge/Standalone%20File-available-red.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/0433adec5129e2f38a0bad498bfc4d7ff273ff0b/PerseusUISystemKitSingle.swift)
 [![Demo App](https://img.shields.io/badge/Demo%20App-available-ff6964.svg)](https://github.com/perseusrealdeal/ios.darkmode.discovery.git)
 [![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.0.4-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.0.4)
 
