@@ -18,21 +18,21 @@ Have a look of demo app, source code is [here](https://github.com/perseusrealdea
 
 # Table of contents
 
-[Introductory remarks](#section1_II)
+[Introductory remarks](#introductory)
 
 Samples:
 
-- [Sample use case of adapted color](#section9)
-- [Sample use case of a dynamic image](#section8)
+- [Sample use case of adapted color](#sample1)
+- [Sample use case of a dynamic image](#sample2)
 
 Specifications:
 
-- [Table 1. Adapted system colors](#section2_II)
-- [Table 2. Adapted semantic colors](#section3_II)
+- [Table 1. Adapted system colors](#table1)
+- [Table 2. Adapted semantic colors](#table2)
 
 [License](#license)
 
-# Introductory remarks <a name="section1_II"></a>
+# Introductory remarks <a name="introductory"></a>
 
 Colors listed in this section, table 1 and 2, represent colors specified by [the official specification](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/). But, not all system colors have been started available from iOS 13.0, colors `.systemMint` and `.systemCyan` available only from iOS 15.0. RGBA details of semantic colors have been exctracted from iOS 15.4, see table 2.
 - Adapted System UI library uses SDK color for sure starting from iOS 13 and the specification for early iOS releases.
@@ -50,7 +50,7 @@ One way to bridge the gap appearing with `.systemTeal` is using the customised c
 
 In fact the actual color values provided below in table 1 and 2 may fluctuate from System release to release but for early System releases the colors adapted follow the specification as is.
 
-# Sample Use Case of Adapted System UI <a name="section9"></a>
+# Sample Use Case of Adapted System UI <a name="sample1"></a>
 
 ```swift
 import UIKit
@@ -66,7 +66,7 @@ In case if a certain color of a Dark Mode sensitive color required use the line 
 _ = UIColor.label_Adapted.resolvedColor(with: self.traitCollection).cgColor
 ```
 
-# Sample Use Case of DarkModeImageView <a name="section8"></a>
+# Sample Use Case of DarkModeImageView <a name="sample2"></a>
 
 DarkModeImageView shows a quite light implementation of a dynamic image idea that is sensetive to Dark Mode.
 
@@ -117,7 +117,7 @@ public class DarkModeImageView: UIImageView
 }
 ```
 
-# Table 1. Adapted system colors <a name="section2_II"></a>
+# Table 1. Adapted system colors <a name="table1"></a>
 
 | RGBA Light                 | RGBA Dark                  | UIKit API Adapted     |
 | :------------------------- | :------------------------- | :-------------------- |
@@ -140,7 +140,7 @@ public class DarkModeImageView: UIImageView
 | 229, 229, 234<br>#E5E5EAFF | 44, 44, 46<br>#2C2C2EFF    | .systemGray5_Adapted  |
 | 242, 242, 247<br>#F2F2F7FF | 28, 28, 30<br>#1C1C1EFF    | .systemGray6_Adapted  |
 
-# Table 2. Adapted semantic colors <a name="section3_II"></a>
+# Table 2. Adapted semantic colors <a name="table2"></a>
 
 | RGBA Light                     | RGBA Dark                        | UIKit API Adapted        |
 | :----------------------------- | :------------------------------- | :----------------------- |
