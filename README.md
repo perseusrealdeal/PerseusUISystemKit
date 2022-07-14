@@ -20,8 +20,13 @@ Have a look of demo app, source code is [here](https://github.com/perseusrealdea
 
 [Introductory remarks](#section1_II)
 
+Samples:
+
 - [Sample use case of adapted color](#section9)
 - [Sample use case of a dynamic image](#section8)
+
+Specifications:
+
 - [Table 1. Adapted system colors](#section2_II)
 - [Table 2. Adapted semantic colors](#section3_II)
 
