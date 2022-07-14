@@ -19,8 +19,7 @@ import PerseusDarkMode
 ///
 /// Each color is either native SDK color or self-made.
 /// It means that for those iOS versions where a color is not released a self-made adaptation in use.
-extension UIColor: SemanticColorProtocol
-{
+extension UIColor: SemanticColorProtocol {
     // MARK: - FOREGROUND
 
     /// Label.

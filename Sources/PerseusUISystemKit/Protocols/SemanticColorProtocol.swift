@@ -14,8 +14,7 @@ import UIKit
 #endif
 
 /// Represents semantic colors requirements.
-public protocol SemanticColorProtocol
-{
+public protocol SemanticColorProtocol {
     // MARK: - FOREGROUND CONTENT
 
     // MARK: - Label Colors

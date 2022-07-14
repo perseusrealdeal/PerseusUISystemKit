@@ -19,8 +19,7 @@ import PerseusDarkMode
 ///
 /// Each color is either native SDK color or self-made.
 /// It means that for those iOS versions where a color is not released a self-made adaptation in use.
-extension UIColor: SystemColorProtocol
-{
+extension UIColor: SystemColorProtocol {
     /// Red.
     public static var systemRed_Adapted: UIColor {
         guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
