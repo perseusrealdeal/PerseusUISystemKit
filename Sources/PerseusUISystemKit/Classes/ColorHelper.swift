@@ -5,11 +5,12 @@
 //  Created by Mikhail Zhigulin in 2022.
 //
 //  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+//  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
 
 import UIKit
-
+import PerseusDarkMode
 /// Creates the instance of UIColor using RGBA color model.
 ///
 /// ```swift
@@ -52,4 +53,8 @@ public extension UIColor {
 
         return (red*255, green*255, blue*255, alpha)
     }
+}
+
+extension UIColor {
+    internal static var _iOS13InUseAndHigherOnly: Bool = true
 }
