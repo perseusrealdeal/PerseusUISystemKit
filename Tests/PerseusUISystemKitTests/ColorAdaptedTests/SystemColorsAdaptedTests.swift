@@ -13,6 +13,7 @@ import XCTest
 @testable import PerseusDarkMode
 @testable import PerseusUISystemKit
 
+#if os(iOS)
 final class SystemColorsAdaptedTests: XCTestCase {
     // MARK: - Tests for Foreground
 
@@ -322,3 +323,6 @@ final class SystemColorsAdaptedTests: XCTestCase {
         UIColor._iOS13InUseAndHigherOnly = true
     }
 }
+#elseif os(macOS)
+// TODO: Unit tests to cover macOS adapted system colors
+#endif

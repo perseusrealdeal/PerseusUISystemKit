@@ -9,10 +9,13 @@
 //  All rights reserved.
 //
 
-#if !os(macOS)
+#if canImport(UIKit)
 import UIKit
+#elseif canImport(Cocoa)
+import Cocoa
 #endif
 
+#if os(iOS)
 /// Represents semantic colors requirements.
 public protocol SemanticColorProtocol {
     // MARK: - FOREGROUND CONTENT
@@ -141,3 +144,6 @@ public protocol SemanticColorProtocol {
     /// - Dark: 58, 58, 60
     static var tertiarySystemGroupedBackground_Adapted: UIColor { get }
 }
+#elseif os(macOS)
+// TODO: List macOS adapted semantic (dynamic) colors requirements
+#endif

@@ -23,7 +23,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusDarkMode.git",
-            .exact("1.0.4"))
+            .branch("v1.0.5"))
     ],
     targets: [
         .target(

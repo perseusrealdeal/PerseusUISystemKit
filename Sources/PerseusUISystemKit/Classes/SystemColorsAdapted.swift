@@ -15,6 +15,7 @@ import UIKit
 
 import PerseusDarkMode
 
+#if os(iOS)
 /// Brings system colors to early iOS releases.
 ///
 /// Each color is either native SDK color or self-made.
@@ -272,3 +273,6 @@ extension UIColor: SystemColorProtocol {
         return .systemGray6
     }
 }
+#elseif os(macOS)
+// TODO: List macOS adapted system colors
+#endif

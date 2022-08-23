@@ -15,6 +15,7 @@ import UIKit
 
 import PerseusDarkMode
 
+#if os(iOS)
 /// Brings semantic colors to early iOS releases.
 ///
 /// Each color is either native SDK color or self-made.
@@ -258,3 +259,6 @@ extension UIColor: SemanticColorProtocol {
         return .tertiarySystemGroupedBackground
     }
 }
+#elseif os(macOS)
+// TODO: List macOS adapted semantic (dynamic) colors
+#endif

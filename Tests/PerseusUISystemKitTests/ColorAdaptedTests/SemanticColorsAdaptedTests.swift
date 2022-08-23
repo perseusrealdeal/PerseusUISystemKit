@@ -13,6 +13,7 @@ import XCTest
 @testable import PerseusDarkMode
 @testable import PerseusUISystemKit
 
+#if os(iOS)
 final class SemanticColorsAdaptedTests: XCTestCase {
     // MARK: - Testing Foreground Colors
 
@@ -328,3 +329,7 @@ final class SemanticColorsAdaptedTests: XCTestCase {
         UIColor._iOS13InUseAndHigherOnly = true
     }
 }
+#elseif os(macOS)
+// TODO: Unit tests to cover macOS adapted semantic (dynamic) colors
+#endif
+

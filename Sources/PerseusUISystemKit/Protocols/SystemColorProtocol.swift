@@ -9,10 +9,13 @@
 //  All rights reserved.
 //
 
-#if !os(macOS)
+#if canImport(UIKit)
 import UIKit
+#elseif canImport(Cocoa)
+import Cocoa
 #endif
 
+#if os(iOS)
 /// Represents system colors requirements.
 public protocol SystemColorProtocol {
     // MARK: - SYSTEM COLORS
@@ -127,3 +130,6 @@ public protocol SystemColorProtocol {
     /// - Dark: 28, 28, 30
     static var systemGray6_Adapted: UIColor { get }
 }
+#elseif os(macOS)
+// TODO: List macOS adapted system colors requirements
+#endif

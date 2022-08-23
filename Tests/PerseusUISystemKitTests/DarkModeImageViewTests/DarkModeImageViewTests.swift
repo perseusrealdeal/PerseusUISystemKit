@@ -9,10 +9,6 @@
 //  All rights reserved.
 //
 
-#if !os(macOS)
-import UIKit
-#endif
-
 import XCTest
 @testable import PerseusDarkMode
 @testable import PerseusUISystemKit

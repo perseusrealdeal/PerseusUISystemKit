@@ -9,13 +9,16 @@
 //  All rights reserved.
 //
 
-#if !os(macOS)
+#if canImport(UIKit)
 import UIKit
+#elseif canImport(Cocoa)
+import Cocoa
 #endif
 
 @testable import PerseusUISystemKit
 
-enum ColorRequirement {
+#if os(iOS)
+public enum ColorRequirementiOS {
     case label
     case secondaryLabel
     case tertiaryLabel
@@ -58,7 +61,7 @@ enum ColorRequirement {
     case systemGray5
     case systemGray6
 
-    var color: UIColor {
+    var color: Color {
         switch self {
         case .label:
             return .label_Adapted
@@ -140,3 +143,15 @@ enum ColorRequirement {
         }
     }
 }
+#elseif os(macOS)
+public enum ColorRequirementmacOS {
+    case label
+// TODO: List all macOS colors requirements from the Apple specification
+    var color: Color {
+        switch self {
+        case .label:
+            return .red
+        }
+    }
+}
+#endif
