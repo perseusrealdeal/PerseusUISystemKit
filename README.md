@@ -1,10 +1,11 @@
 Perseus UISystemKit
 ======================================
 [![Actions Status](https://github.com/perseusrealdeal/PerseusUISystemKit/actions/workflows/CI.yml/badge.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/actions)
-![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)
-![Pod](https://img.shields.io/badge/Pod-1.0.0-green.svg)
-[![Platforms iOS 9](https://img.shields.io/badge/Platforms-iOS%209.0-orange.svg)](https://en.wikipedia.org/wiki/IOS_9)
-[![SDK UIKit](https://img.shields.io/badge/SDK-UIKit%20-blueviolet.svg)](https://developer.apple.com/documentation/uikit)
+![Version](https://img.shields.io/badge/Version-1.1.0-green.svg)
+![Pod](https://img.shields.io/badge/Pod-1.1.0-green.svg)
+[![Platforms iOS 9+](https://img.shields.io/badge/Platform-iOS%209.0+-orange.svg)](https://en.wikipedia.org/wiki/IOS_9)
+[![Platforms macOS 10.9+](https://img.shields.io/badge/Platform-macOS%2010.9+-orange.svg)](https://en.wikipedia.org/wiki/MacOS)
+[![SDK UIKit](https://img.shields.io/badge/SDK-UIKit,%20Cocoa-blueviolet.svg)](https://developer.apple.com/documentation/uikit)
 [![Swift 5.3](https://img.shields.io/badge/Swift-5.3-red.svg)](https://docs.swift.org/swift-book/RevisionHistory/RevisionHistory.html)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-informational.svg)](https://github.com/apple/swift-package-manager)
 [![CocoaPods manager](https://img.shields.io/badge/CocoaPods%20Manager-compatible-informational.svg)](https://cocoapods.org)
@@ -13,7 +14,8 @@ Perseus UISystemKit
 Have a look of demo app, source code is [here](https://github.com/perseusrealdeal/ios.darkmode.discovery.git).
 
 [![Standalone File](https://img.shields.io/badge/Standalone%20File-available-red.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/0433adec5129e2f38a0bad498bfc4d7ff273ff0b/PerseusUISystemKitSingle.swift)
-[![Demo App](https://img.shields.io/badge/Demo%20App-available-ff6964.svg)](https://github.com/perseusrealdeal/ios.darkmode.discovery.git)
+[![Demo App](https://img.shields.io/badge/iOS%20Demo%20App-available-ff6964.svg)](https://github.com/perseusrealdeal/ios.darkmode.discovery.git)
+[![Demo App](https://img.shields.io/badge/macOS%20Demo%20App-available-ff6964.svg)](https://github.com/perseusrealdeal/macos.darkmode.discovery.git)
 [![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.0.4-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.0.4)
 
 # Table of contents
@@ -25,10 +27,15 @@ Samples:
 - [Sample use case of adapted color](#sample1)
 - [Sample use case of a dynamic image](#sample2)
 
-Specifications:
+iOS colors specification:
 
 - [Table 1. Adapted system colors](#table1)
-- [Table 2. Adapted semantic colors](#table2)
+- [Table 2. Adapted semantic (dynamic) colors](#table2)
+
+macOS colors specification:
+
+- [Table 3. Adapted system colors](#table3)
+- [Table 4. Adapted semantic (dynamic) colors](#table4)
 
 [License](#license)
 
@@ -117,6 +124,8 @@ public class DarkModeImageView: UIImageView
 }
 ```
 
+# iOS colors specification
+
 # Table 1. Adapted system colors <a name="table1"></a>
 
 | RGBA Light                 | RGBA Dark                  | UIKit API Adapted     |
@@ -140,7 +149,7 @@ public class DarkModeImageView: UIImageView
 | 229, 229, 234<br>#E5E5EAFF | 44, 44, 46<br>#2C2C2EFF    | .systemGray5_Adapted  |
 | 242, 242, 247<br>#F2F2F7FF | 28, 28, 30<br>#1C1C1EFF    | .systemGray6_Adapted  |
 
-# Table 2. Adapted semantic colors <a name="table2"></a>
+# Table 2. Adapted semantic (dynamic) colors <a name="table2"></a>
 
 | RGBA Light                     | RGBA Dark                        | UIKit API Adapted        |
 | :----------------------------- | :------------------------------- | :----------------------- |
@@ -171,6 +180,12 @@ public class DarkModeImageView: UIImageView
 | 242, 242, 247, 1<br>#F2F2F7FF | 28, 28, 30, 1<br>#1C1C1EFF | .systemGroupedBackground_Adapted          |
 | 255, 255, 255, 1<br>#FFFFFFFF | 44, 44, 46, 1<br>#2C2C2EFF | .secondarySystemGroupedBackground_Adapted | 
 | 242, 242, 247, 1<br>#F2F2F7FF | 58, 58, 60, 1<br>#3A3A3CFF | .tertiarySystemGroupedBackground_Adapted  |
+
+# macOS colors specification
+
+# Table 3. Adapted system colors <a name="table3"></a>
+
+# Table 4. Adapted semantic (dynamic) colors <a name="table4"></a>
 
 # License <a name="license"></a>
 
