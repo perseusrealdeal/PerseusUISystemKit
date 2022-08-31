@@ -145,12 +145,50 @@ public enum ColorRequirementiOS {
 }
 #elseif os(macOS)
 public enum ColorRequirementmacOS {
-    case label
-// TODO: List all macOS colors requirements from the Apple specification
+    case systemRed
+    case systemOrange
+    case systemYellow
+    case systemGreen
+    case systemMint
+    case systemTeal
+    case systemCyan
+    case systemBlue
+    case systemIndigo
+    case systemPurple
+    case systemPink
+    case systemBrown
+
+    case systemGray
+
     var color: Color {
         switch self {
-        case .label:
-            return .red
+        case .systemRed:
+            return .systemRed_Adapted
+        case .systemOrange:
+            return .systemOrange_Adapted
+        case .systemYellow:
+            return .systemYellow_Adapted
+        case .systemGreen:
+            return .systemGreen_Adapted
+        case .systemMint:
+            return .systemMint_Adapted
+        case .systemTeal:
+            return .systemTeal_Adapted
+        case .systemCyan:
+            return .systemCyan_Adapted
+        case .systemBlue:
+            return .systemBlue_Adapted
+        case .systemIndigo:
+            return .systemIndigo_Adapted
+        case .systemPurple:
+            return .systemPurple_Adapted
+        case .systemPink:
+            return .systemPink_Adapted
+        case .systemBrown:
+            return .systemBrown_Adapted
+
+        case .systemGray:
+            return .systemGray_Adapted
         }
     }
 }

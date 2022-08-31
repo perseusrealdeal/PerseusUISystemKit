@@ -16,7 +16,7 @@ import Cocoa
 #endif
 
 #if os(iOS)
-/// Represents system colors requirements.
+/// Represents system colors requirements for iOS, iPadOS.
 public protocol SystemColorProtocol {
     // MARK: - SYSTEM COLORS
 
@@ -131,5 +131,88 @@ public protocol SystemColorProtocol {
     static var systemGray6_Adapted: UIColor { get }
 }
 #elseif os(macOS)
-// TODO: List macOS adapted system colors requirements
+/// Represents system colors requirements for macOS.
+public protocol SystemColorProtocol {
+    // MARK: - SYSTEM COLORS
+
+    /// Red.
+    ///
+    /// - Light: 255, 59, 48
+    /// - Dark: 255, 69, 58
+    static var systemRed_Adapted: NSColor { get }
+
+    /// Orange.
+    ///
+    /// - Light: 255, 149, 0
+    /// - Dark: 255, 159, 10
+    static var systemOrange_Adapted: NSColor { get }
+
+    /// Yellow.
+    ///
+    /// - Light: 255, 204, 0
+    /// - Dark: 255, 214, 10
+    static var systemYellow_Adapted: NSColor { get }
+
+    /// Green.
+    ///
+    /// - Light: 40, 205, 65
+    /// - Dark: 50, 215, 75
+    static var systemGreen_Adapted: NSColor { get }
+
+    /// Mint.
+    ///
+    /// - Light: 0, 199, 190
+    /// - Dark: 102, 212, 207
+    static var systemMint_Adapted: NSColor { get }
+
+    /// Teal.
+    ///
+    /// - Light: 89, 173, 196
+    /// - Dark: 100, 196, 220
+    static var systemTeal_Adapted: NSColor { get }
+
+    /// Cyan.
+    ///
+    /// - Light: 85, 190, 240
+    /// - Dark: 90, 200, 245
+    static var systemCyan_Adapted: NSColor { get }
+
+    /// Blue.
+    ///
+    /// - Light: 0, 122, 255
+    /// - Dark: 10, 132, 255
+    static var systemBlue_Adapted: NSColor { get }
+
+    /// Indigo.
+    ///
+    /// - Light: 88, 86, 214
+    /// - Dark: 94, 92, 230
+    static var systemIndigo_Adapted: NSColor { get }
+
+    /// Purple.
+    ///
+    /// - Light: 175, 82, 222
+    /// - Dark: 191, 90, 242
+    static var systemPurple_Adapted: NSColor { get }
+
+    /// Pink.
+    ///
+    /// - Light: 255, 45, 85
+    /// - Dark: 255, 55, 95
+    static var systemPink_Adapted: NSColor { get }
+
+    /// Brown.
+    ///
+    /// - Light: 162, 132, 94
+    /// - Dark: 172, 142, 104
+    static var systemBrown_Adapted: NSColor { get }
+
+    // MARK: - The group of system gray colors
+
+    /// Gray.
+    ///
+    /// - Light: 142, 142, 147
+    /// - Dark: 152, 152, 157
+    static var systemGray_Adapted: NSColor { get }
+}
 #endif

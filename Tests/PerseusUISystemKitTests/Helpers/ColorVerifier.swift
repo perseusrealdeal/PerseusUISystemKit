@@ -34,7 +34,7 @@ final class ColorVerifier {
                       _ colorOS: Color?,
                       file: StaticString = #file,
                       line: UInt = #line) {
-        if #available(iOS 13.0, *), colorOS != nil {
+        if #available(iOS 13.0, macOS 10.10, *), colorOS != nil {
             XCTAssertEqual(requirement.color, colorOS)
         } else {
             AppearanceService.DarkModeUserChoice = .off

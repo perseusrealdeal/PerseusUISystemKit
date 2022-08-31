@@ -68,5 +68,5 @@ public extension Color {
 }
 
 extension Color {
-    internal static var _iOS13InUseAndHigherOnly: Bool = true
+    internal static var theColorIsDarkModeNativeWithThisOS: Bool = true
 }

@@ -25,7 +25,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Label.
     public static var label_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(0, 0, 0) : rgba255(255, 255, 255)
@@ -38,7 +38,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Secondary label.
     public static var secondaryLabel_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(60, 60, 67, 0.6) : rgba255(235, 235, 245, 0.6)
@@ -51,7 +51,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Tertiary label.
     public static var tertiaryLabel_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(60, 60, 67, 0.3) : rgba255(235, 235, 245, 0.3)
@@ -64,7 +64,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Quaternary label.
     public static var quaternaryLabel_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(60, 60, 67, 0.18) : rgba255(235, 235, 245, 0.16)
@@ -77,7 +77,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Placeholder text.
     public static var placeholderText_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(60, 60, 67, 0.3) : rgba255(235, 235, 245, 0.3)
@@ -90,7 +90,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Separator.
     public static var separator_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(60, 60, 67, 0.29) : rgba255(84, 84, 88, 0.6)
@@ -103,7 +103,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Opaque separator.
     public static var opaqueSeparator_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(198, 198, 200) : rgba255(56, 56, 58)
@@ -116,7 +116,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Link.
     public static var link_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(0, 122, 255) : rgba255(9, 132, 255)
@@ -129,7 +129,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// System fill.
     public static var systemFill_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(120, 120, 128, 0.2) : rgba255(120, 120, 128, 0.36)
@@ -142,7 +142,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Secondary system fill.
     public static var secondarySystemFill_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(120, 120, 128, 0.16) : rgba255(120, 120, 128, 0.32)
@@ -155,7 +155,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Tertiary system fill.
     public static var tertiarySystemFill_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(118, 118, 128, 0.12) : rgba255(118, 118, 128, 0.24)
@@ -168,7 +168,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Quaternary system fill.
     public static var quaternarySystemFill_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(116, 116, 128, 0.08) : rgba255(118, 118, 128, 0.18)
@@ -183,7 +183,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// System background.
     public static var systemBackground_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(255, 255, 255) : rgba255(28, 28, 30)
@@ -196,7 +196,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Secondary system background.
     public static var secondarySystemBackground_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(242, 242, 247) : rgba255(44, 44, 46)
@@ -209,7 +209,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Tertiary system background.
     public static var tertiarySystemBackground_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(255, 255, 255) : rgba255(58, 58, 60)
@@ -222,7 +222,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// System grouped background.
     public static var systemGroupedBackground_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(242, 242, 247) : rgba255(28, 28, 30)
@@ -235,7 +235,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Secondary system grouped background.
     public static var secondarySystemGroupedBackground_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(255, 255, 255) : rgba255(44, 44, 46)
@@ -248,7 +248,7 @@ extension UIColor: SemanticColorProtocol {
 
     /// Tertiary system grouped background.
     public static var tertiarySystemGroupedBackground_Adapted: UIColor {
-        guard #available(iOS 13.0, *), _iOS13InUseAndHigherOnly else {
+        guard #available(iOS 13.0, *), theColorIsDarkModeNativeWithThisOS else {
             let color = AppearanceService.shared.Style == .light ?
 
                 rgba255(242, 242, 247) : rgba255(58, 58, 60)
