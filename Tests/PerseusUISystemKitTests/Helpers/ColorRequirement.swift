@@ -8,6 +8,7 @@
 //  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
+// swiftlint:disable identifier_name
 
 #if canImport(UIKit)
 import UIKit
@@ -145,6 +146,9 @@ public enum ColorRequirementiOS {
 }
 #elseif os(macOS)
 public enum ColorRequirementmacOS {
+
+    // List of system colors
+
     case systemRed
     case systemOrange
     case systemYellow
@@ -160,8 +164,51 @@ public enum ColorRequirementmacOS {
 
     case systemGray
 
+    // List of semantic colors
+
+    case alternateSelectedControlTextColor
+    case alternatingContentBackgroundColors
+    case controlAccentColor
+    case controlBackgroundColor
+    case controlColor
+    case controlTextColor
+    case currentControlTint
+    case disabledControlTextColor
+    case findHighlightColor
+    case gridColor
+    case headerTextColor
+    case highlightColor
+    case keyboardFocusIndicatorColor
+    case labelColor
+    case linkColor
+    case placeholderTextColor
+    case quaternaryLabelColor
+    case scrubberTexturedBackgroundColor
+    case secondaryLabelColor
+    case selectedContentBackgroundColor
+    case selectedControlColor
+    case selectedControlTextColor
+    case selectedMenuItemTextColor
+    case selectedTextBackgroundColor
+    case selectedTextColor
+    case separatorColor
+    case shadowColor
+    case tertiaryLabelColor
+    case textBackgroundColor
+    case textColor
+    case underPageBackgroundColor
+    case unemphasizedSelectedContentBackgroundColor
+    case unemphasizedSelectedTextBackgroundColor
+    case unemphasizedSelectedTextColor
+    case windowBackgroundColor
+    case windowFrameTextColor
+
     var color: Color {
+
         switch self {
+
+        // gives system color adapted
+
         case .systemRed:
             return .systemRed_Adapted
         case .systemOrange:
@@ -189,6 +236,81 @@ public enum ColorRequirementmacOS {
 
         case .systemGray:
             return .systemGray_Adapted
+
+        // gives semantic color adapted
+
+        case .alternateSelectedControlTextColor:
+            return .alternateSelectedControlTextColor_Adapted
+        case .alternatingContentBackgroundColors:
+            return .alternatingContentBackgroundColors_Adapted
+        case .controlAccentColor:
+            return .controlAccentColor_Adapted
+        case .controlBackgroundColor:
+            return .controlBackgroundColor_Adapted
+        case .controlColor:
+            return .controlColor_Adapted
+        case .controlTextColor:
+            return .controlTextColor_Adapted
+        case .currentControlTint:
+            return .currentControlTint_Adapted
+        case .disabledControlTextColor:
+            return .disabledControlTextColor_Adapted
+        case .findHighlightColor:
+            return .findHighlightColor_Adapted
+        case .gridColor:
+            return .gridColor_Adapted
+        case .headerTextColor:
+            return .headerTextColor_Adapted
+        case .highlightColor:
+            return .highlightColor_Adapted
+        case .keyboardFocusIndicatorColor:
+            return .keyboardFocusIndicatorColor_Adapted
+        case .labelColor:
+            return .labelColor_Adapted
+        case .linkColor:
+            return .linkColor_Adapted
+        case .placeholderTextColor:
+            return .placeholderTextColor_Adapted
+        case .quaternaryLabelColor:
+            return .quaternaryLabelColor_Adapted
+        case .scrubberTexturedBackgroundColor:
+            return .scrubberTexturedBackgroundColor_Adapted
+        case .secondaryLabelColor:
+            return .secondaryLabelColor_Adapted
+        case .selectedContentBackgroundColor:
+            return .selectedContentBackgroundColor_Adapted
+        case .selectedControlColor:
+            return .selectedControlColor_Adapted
+        case .selectedControlTextColor:
+            return .selectedControlTextColor_Adapted
+        case .selectedMenuItemTextColor:
+            return .selectedMenuItemTextColor_Adapted
+        case .selectedTextBackgroundColor:
+            return .selectedTextBackgroundColor_Adapted
+        case .selectedTextColor:
+            return .selectedTextColor_Adapted
+        case .separatorColor:
+            return .separatorColor_Adapted
+        case .shadowColor:
+            return .shadowColor_Adapted
+        case .tertiaryLabelColor:
+            return .tertiaryLabelColor_Adapted
+        case .textBackgroundColor:
+            return .textBackgroundColor_Adapted
+        case .textColor:
+            return .textColor_Adapted
+        case .underPageBackgroundColor:
+            return .underPageBackgroundColor_Adapted
+        case .unemphasizedSelectedContentBackgroundColor:
+            return .unemphasizedSelectedContentBackgroundColor_Adapted
+        case .unemphasizedSelectedTextBackgroundColor:
+            return .unemphasizedSelectedTextBackgroundColor_Adapted
+        case .unemphasizedSelectedTextColor:
+            return .unemphasizedSelectedTextColor_Adapted
+        case .windowBackgroundColor:
+            return .windowBackgroundColor_Adapted
+        case .windowFrameTextColor:
+            return .windowFrameTextColor_Adapted
         }
     }
 }

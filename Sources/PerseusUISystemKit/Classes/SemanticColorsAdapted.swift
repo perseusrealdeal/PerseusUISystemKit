@@ -8,9 +8,12 @@
 //  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
+// swiftlint:disable identifier_name
 
-#if !os(macOS)
+#if canImport(UIKit)
 import UIKit
+#elseif canImport(Cocoa)
+import Cocoa
 #endif
 
 import PerseusDarkMode
@@ -260,5 +263,149 @@ extension UIColor: SemanticColorProtocol {
     }
 }
 #elseif os(macOS)
-// TODO: List macOS adapted semantic (dynamic) colors
+extension NSColor: SemanticColorProtocol {
+    public static var alternateSelectedControlTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var alternatingContentBackgroundColors_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var controlAccentColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var controlBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var controlColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var controlTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var currentControlTint_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var disabledControlTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var findHighlightColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var gridColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var headerTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var highlightColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var keyboardFocusIndicatorColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var labelColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var linkColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var placeholderTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var quaternaryLabelColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var scrubberTexturedBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var secondaryLabelColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var selectedContentBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var selectedControlColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var selectedControlTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var selectedMenuItemTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var selectedTextBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var selectedTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var separatorColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var shadowColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var tertiaryLabelColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var textBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var textColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var underPageBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var unemphasizedSelectedContentBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var unemphasizedSelectedTextBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var unemphasizedSelectedTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var windowBackgroundColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+
+    public static var windowFrameTextColor_Adapted: NSColor {
+        return rgba255(255, 255, 255)
+    }
+}
 #endif

@@ -330,5 +330,160 @@ final class SemanticColorsAdaptedTests: XCTestCase {
     }
 }
 #elseif os(macOS)
-// TODO: Unit tests to cover macOS adapted semantic (dynamic) colors
+final class SemanticColorsAdaptedTests: XCTestCase {
+    func test_alternateSelectedControlTextColor_Adapted() {
+        let light = rgba255(255, 255, 255)
+        let dark = rgba255(255, 255, 255)
+
+        if #available(macOS 10.10, *) {
+            NSColor.theColorIsDarkModeNativeWithThisOS = true
+            ColorVerifier.verify(requirement: .alternateSelectedControlTextColor,
+                                 nil, nil, .alternateSelectedControlTextColor)
+
+            NSColor.theColorIsDarkModeNativeWithThisOS = false
+            ColorVerifier.verify(requirement: .alternateSelectedControlTextColor,
+                                 light, dark, nil)
+        } else {
+            XCTFail("Test suit was designed for runing on iOS 13 and higher only!")
+        }
+
+        NSColor.theColorIsDarkModeNativeWithThisOS = true
+    }
+
+    func test_alternatingContentBackgroundColors_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_controlAccentColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_controlBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_controlColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_controlTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_currentControlTint_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_disabledControlTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_findHighlightColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_gridColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_headerTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_highlightColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_keyboardFocusIndicatorColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_labelColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_linkColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_placeholderTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_quaternaryLabelColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_scrubberTexturedBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_secondaryLabelColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_selectedContentBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_selectedControlColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_selectedControlTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_selectedMenuItemTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_selectedTextBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_selectedTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_separatorColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_shadowColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_tertiaryLabelColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_textBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_textColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_underPageBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_unemphasizedSelectedContentBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_unemphasizedSelectedTextBackgroundColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_unemphasizedSelectedTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+
+    func test_windowFrameTextColor_Adapted() {
+        XCTFail("Tests not yet implemented in \(type(of: self)).")
+    }
+}
 #endif

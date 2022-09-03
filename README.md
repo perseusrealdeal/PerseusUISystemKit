@@ -67,10 +67,12 @@ let view = UIView()
 view.backgroundColor = .systemBlue_Adapted
 ```
 
-In case if a certain color of a Dark Mode sensitive color required use the line of code below:
+In case if a certain color of a Dark Mode sensitive color is required use the line of code below:
 
 ```swift
+
 _ = UIColor.label_Adapted.resolvedColor(with: self.traitCollection).cgColor
+
 ```
 
 # Sample Use Case of DarkModeImageView <a name="sample2"></a>

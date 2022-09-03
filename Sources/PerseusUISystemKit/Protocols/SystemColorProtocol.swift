@@ -207,8 +207,6 @@ public protocol SystemColorProtocol {
     /// - Dark: 172, 142, 104
     static var systemBrown_Adapted: NSColor { get }
 
-    // MARK: - The group of system gray colors
-
     /// Gray.
     ///
     /// - Light: 142, 142, 147

@@ -35,7 +35,17 @@ final class ColorVerifier {
                       file: StaticString = #file,
                       line: UInt = #line) {
         if #available(iOS 13.0, macOS 10.10, *), colorOS != nil {
+#if os(iOS)
             XCTAssertEqual(requirement.color, colorOS)
+#elseif os(macOS)
+            if let color = colorOS,
+               let colorRequired = requirement.color.usingColorSpace(.sRGB),
+               let colorsRGB = color.usingColorSpace(.sRGB) {
+                XCTAssertEqual(colorRequired, colorsRGB)
+            } else {
+                XCTFail("There is something unexpected with color representing!")
+            }
+#endif
         } else {
             AppearanceService.DarkModeUserChoice = .off
             AppearanceService.makeUp()
