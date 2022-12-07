@@ -4,15 +4,18 @@
 //
 //  Contains Dependency PerseusDarkModeSingle v1.1.0
 //
-//  Created by Mikhail Zhigulin in 2022.
+//  Created by Mikhail Zhigulin in 7530.
 //
-//  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+//  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
 //  All rights reserved.
 //
 //
 //  MIT License
 //
-//  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk
+//  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk
+//
+//  The year starts from the creation of the world according to a Slavic calendar.
+//  September, the 1st of Slavic year.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal

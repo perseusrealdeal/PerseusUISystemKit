@@ -2,14 +2,18 @@
 //  DarkModeImageViewTests.swift
 //  PerseusUISystemKitTests
 //
-//  Created by Mikhail Zhigulin in 2022.
+//  Created by Mikhail Zhigulin in 7530.
 //
-//  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+//  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
+//
 //  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
+// swiftlint:disable file_length
+//
 
 import XCTest
+
 @testable import PerseusDarkMode
 @testable import PerseusUISystemKit
 
@@ -59,7 +63,7 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.light
+        AppearanceService.shared.hidden_style = AppearanceStyle.light
 
         sut.configure(light, dark)
 
@@ -79,7 +83,7 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.dark
+        AppearanceService.shared.hidden_style = AppearanceStyle.dark
 
         sut.configure(light, dark)
 
@@ -99,11 +103,11 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.dark
+        AppearanceService.shared.hidden_style = AppearanceStyle.dark
 
         sut.configure(light, dark)
 
-        AppearanceService.shared._style = AppearanceStyle.light
+        AppearanceService.shared.hidden_style = AppearanceStyle.light
 
         // assert
 
@@ -121,11 +125,11 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.light
+        AppearanceService.shared.hidden_style = AppearanceStyle.light
 
         sut.configure(light, dark)
 
-        AppearanceService.shared._style = AppearanceStyle.dark
+        AppearanceService.shared.hidden_style = AppearanceStyle.dark
 
         // assert
 
@@ -145,7 +149,7 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.light
+        AppearanceService.shared.hidden_style = AppearanceStyle.light
 
         sut.imageLight = light
         sut.imageDark = dark
@@ -172,7 +176,7 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.dark
+        AppearanceService.shared.hidden_style = AppearanceStyle.dark
 
         sut.imageLight = light
         sut.imageDark = dark
@@ -199,12 +203,12 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.dark
+        AppearanceService.shared.hidden_style = AppearanceStyle.dark
 
         sut.imageLight = light
         sut.imageDark = dark
 
-        AppearanceService.shared._style = AppearanceStyle.light
+        AppearanceService.shared.hidden_style = AppearanceStyle.light
 
         // assert
 
@@ -222,12 +226,12 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // act
 
-        AppearanceService.shared._style = AppearanceStyle.light
+        AppearanceService.shared.hidden_style = AppearanceStyle.light
 
         sut.imageLight = light
         sut.imageDark = dark
 
-        AppearanceService.shared._style = AppearanceStyle.dark
+        AppearanceService.shared.hidden_style = AppearanceStyle.dark
 
         // assert
 

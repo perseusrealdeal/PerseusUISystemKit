@@ -2,9 +2,10 @@
 //  DarkModeImageView.swift
 //  PerseusUISystemKit
 //
-//  Created by Mikhail Zhigulin in 2022.
+//  Created by Mikhail Zhigulin in 7530.
 //
-//  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+//  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
+//
 //  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
@@ -19,39 +20,36 @@ import Cocoa
 import PerseusDarkMode
 
 #if os(iOS)
-    public typealias ImageView = UIImageView
-    public typealias Image = UIImage
+public typealias ImageView = UIImageView
+public typealias Image = UIImage
 #elseif os(macOS)
-    public typealias ImageView = NSImageView
-    public typealias Image = NSImage
+public typealias ImageView = NSImageView
+public typealias Image = NSImage
 #endif
 
-/// Represents a quite light implementation of a dynamic image idea that depends on the app's appearance style.
-///
-/// Use Interface Builder to set images up for both light and dark styles.
+// MARK: - Image View with Dynamic Apperance Changing
+
 public class DarkModeImageView: ImageView {
-    /// The way to set image up for light style via Interface Builder.
-    @IBInspectable var imageLight: Image? {
+
+    @IBInspectable
+    var imageLight: Image? {
         didSet {
             light = imageLight
-            image = AppearanceService.shared.Style == .light ? light : dark
+            image = DarkMode.style == .light ? light : dark
         }
     }
 
-    /// The way to set image up for dark style via Interface Builder.
-    @IBInspectable var imageDark: Image? {
+    @IBInspectable
+    var imageDark: Image? {
         didSet {
             dark = imageDark
-            image = AppearanceService.shared.Style == .light ? light : dark
+            image = DarkMode.style == .light ? light : dark
         }
     }
 
-    /// Observer for the app's appearance style changes.
     private(set) var darkModeObserver: DarkModeObserver?
 
-    /// When the app's appearance style is Light.
     private(set) var light: Image?
-    /// When the app's appearance style is Dark.
     private(set) var dark: Image?
 
     override init(frame: CGRect) {
@@ -64,17 +62,12 @@ public class DarkModeImageView: ImageView {
         configure()
     }
 
-    /// Configures the view.
     private func configure() {
         darkModeObserver = DarkModeObserver { style in
             self.image = style == .light ? self.light : self.dark
         }
     }
 
-    /// Sets images for both light and dark styles.
-    /// - Parameters:
-    ///   - light: Image for light style.
-    ///   - dark: Image for dark style.
     public func configure(_ light: Image?, _ dark: Image?) {
         self.light = light
         self.dark = dark
@@ -83,6 +76,6 @@ public class DarkModeImageView: ImageView {
             self.image = style == .light ? self.light : self.dark
         }
 
-        image = AppearanceService.shared.Style == .light ? self.light : self.dark
+        image = DarkMode.style == .light ? self.light : self.dark
     }
 }

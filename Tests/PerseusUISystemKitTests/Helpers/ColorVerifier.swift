@@ -2,9 +2,10 @@
 //  ColorVerifier.swift
 //  PerseusUISystemKitTests
 //
-//  Created by Mikhail Zhigulin in 2022.
+//  Created by Mikhail Zhigulin in 7530.
 //
-//  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+//  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
+//
 //  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
@@ -16,46 +17,29 @@ import Cocoa
 #endif
 
 import XCTest
+
 @testable import PerseusDarkMode
 @testable import PerseusUISystemKit
 
 #if os(iOS)
 public typealias Color = UIColor
-public typealias ColorRequirement = ColorRequirementiOS
 #elseif os(macOS)
 public typealias Color = NSColor
-public typealias ColorRequirement = ColorRequirementmacOS
 #endif
 
 final class ColorVerifier {
-    class func verify(requirement: ColorRequirement,
-                      _ requiredLight: Color?,
-                      _ requiredDark: Color?,
-                      _ colorOS: Color?,
+    class func verify(required: ColorRequirement, _ light: Color, _ dark: Color,
                       file: StaticString = #file,
                       line: UInt = #line) {
-        if #available(iOS 13.0, macOS 10.10, *), colorOS != nil {
-#if os(iOS)
-            XCTAssertEqual(requirement.color, colorOS)
-#elseif os(macOS)
-            if let color = colorOS,
-               let colorRequired = requirement.color.usingColorSpace(.sRGB),
-               let colorsRGB = color.usingColorSpace(.sRGB) {
-                XCTAssertEqual(colorRequired, colorsRGB)
-            } else {
-                XCTFail("There is something unexpected with color representing!")
-            }
-#endif
-        } else {
-            AppearanceService.DarkModeUserChoice = .off
-            AppearanceService.makeUp()
 
-            XCTAssertEqual(requirement.color, requiredLight)
+        AppearanceService.DarkModeUserChoice = .off
+        AppearanceService.makeUp()
 
-            AppearanceService.DarkModeUserChoice = .on
-            AppearanceService.makeUp()
+        XCTAssertEqual(required.color, light)
 
-            XCTAssertEqual(requirement.color, requiredDark)
-        }
+        AppearanceService.DarkModeUserChoice = .on
+        AppearanceService.makeUp()
+
+        XCTAssertEqual(required.color, dark)
     }
 }
