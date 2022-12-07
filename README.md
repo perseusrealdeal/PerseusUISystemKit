@@ -5,7 +5,6 @@
 ![Pod](https://img.shields.io/badge/Pod-1.1.0-informational.svg)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%209.3+,%20macOS%2010.9+-orange.svg)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-red.svg)](https://docs.swift.org/swift-book/RevisionHistory/RevisionHistory.html)
-[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.0-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.0)
 [![License](http://img.shields.io/:License-MIT-blue.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/6dfadf409147fd736c20c5280e30e500fbcf0f81/LICENSE)
 
 ## Integration Capabilities
@@ -14,6 +13,10 @@
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg)](https://github.com/apple/swift-package-manager)
 [![CocoaPods manager](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://cocoapods.org)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+
+## Dependencies
+
+[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.0-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.0)
 
 ## Demo Apps and Others
 
