@@ -20,4 +20,32 @@
 [![Demo App](https://img.shields.io/badge/macOS%20Demo%20App-available-yellow.svg)](https://github.com/perseusrealdeal/macos.darkmode.discovery.git)
 [![XcodeTemplateProject](http://img.shields.io/:Template-XcodeTemplateProject-blue.svg)](https://github.com/perseusrealdeal/XcodeTemplateProject.git)
 
+## Reqirements
 
+- Xcode 10.1+
+- Swift 4.2+
+- iOS: 9.3+, UIKit SDK
+- macOS: 10.9+, AppKit SDK
+
+## First-party software
+
+- [Perseus Dark Mode](https://github.com/perseusrealdeal/PerseusDarkMode.git)
+
+## Third-party software
+
+- [SwiftLint Shell Script Runner](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/eae74253eb86cacf38d5363d19042c4ebe951d34/SucceedsPostAction.sh)
+
+## License MIT
+
+Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
+
+- The year starts from the creation of the world according to a Slavic calendar.
+- September, the 1st of Slavic year.
+
+Have a look at [LICENSE](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/6dfadf409147fd736c20c5280e30e500fbcf0f81/LICENSE) for details.
+
+## Author and Acknowledgments
+
+`PerseusUISystemKit` was written at Novosibirsk by Mikhail Zhigulin i.e. me, mzhigulin@gmail.com.
+
+Mostly I'd like thank my lovely parents for supporting me in all my ways.
