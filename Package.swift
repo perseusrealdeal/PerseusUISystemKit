@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.1
 /* Package.swift
 
  Created by Mikhail Zhigulin in 7530.
@@ -16,7 +16,7 @@ import PackageDescription
 
 let package = Package(
     name: "PerseusUISystemKit",
-    platforms: [.iOS(.v9)],
+    platforms: [.macOS(.v10_10), .iOS(.v9)],
     products: [
         .library(
             name: "PerseusUISystemKit",
