@@ -1,5 +1,6 @@
 # Perseus UI System Kit
 
+[![Actions Status](https://github.com/perseusrealdeal/PerseusUISystemKit/actions/workflows/main.yml/badge.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/actions)
 ![Version](https://img.shields.io/badge/Version-1.1.0-informational.svg)
 ![Pod](https://img.shields.io/badge/Pod-1.1.0-informational.svg)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%209.3+,%20macOS%2010.9+-orange.svg)
