@@ -128,6 +128,7 @@ class MainViewController: UIViewController {
 ### Using
 
 Step 3: import PerseusUISystemKit and register a view controller of a screen
+
 Step 4: then put all UI customs into makeUp() mathod of a registered view controller
 
 ```swift
