@@ -33,13 +33,9 @@ final class ColorVerifier {
                       line: UInt = #line) {
 
         AppearanceService.DarkModeUserChoice = .off
-        AppearanceService.makeUp()
-
         XCTAssertEqual(required.color, light)
 
         AppearanceService.DarkModeUserChoice = .on
-        AppearanceService.makeUp()
-
         XCTAssertEqual(required.color, dark)
     }
 }
