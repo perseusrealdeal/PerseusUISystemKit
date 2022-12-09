@@ -143,8 +143,8 @@ class MainViewController: UIViewController {
     }
 
     @objc private func makeUp() {
-        print("^_^ \(AppearanceService.DarkModeUserChoice)"
-
+        print("^_^ \(DarkMode.style) \(UIColor.perseusBlue.RGBA255)")
+        
         view.backgroundColor = .perseusBlue
     }
 }
