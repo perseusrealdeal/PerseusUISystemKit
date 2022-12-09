@@ -59,6 +59,14 @@ target "ProjectTarget" do
   pod 'PerseusUISystemKit', '1.1.0'
 end
 ```
+### Carthage
+
+Cartfile should contain:
+
+```carthage
+github "perseusrealdeal/PerseusDarkMode" == 1.1.0
+github "perseusrealdeal/PerseusUISystemKit" == 1.1.0
+```
 
 ### Swift Package Manager
 
