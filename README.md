@@ -24,6 +24,10 @@
 [![Demo App](https://img.shields.io/badge/macOS%20Demo%20App-available-yellow.svg)](https://github.com/perseusrealdeal/macos.darkmode.discovery.git)
 [![XcodeTemplateProject](http://img.shields.io/:Template-XcodeTemplateProject-blue.svg)](https://github.com/perseusrealdeal/XcodeTemplateProject.git)
 
+## In Brief
+
+This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image, all used with Perseus Dark Mode in runtime to make Dark Mode sensitive UI up.
+
 ## Reqirements
 
 - Xcode 10.1+
