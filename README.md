@@ -109,7 +109,7 @@ extension AppDelegate: UIApplicationDelegate {
 }
 ```
 
-Step 2: and only if iOS, so, override method traitCollectionDidChange of the first app's screen, once 
+Step 2: only if iOS, override method traitCollectionDidChange of the first app's screen, once 
 
 ```swift
 import PerseusDarkMode
@@ -127,13 +127,10 @@ class MainViewController: UIViewController {
 
 ### Using
 
-Step 3: import PerseusUISystemKit and register a view controller of a screen
-
-Step 4: then put all UI customs into makeUp() mathod of a registered view controller
+Step 3: register a view controller of a screen
 
 ```swift
 import PerseusDarkMode
-import PerseusUISystemKit
 
 class MainViewController: UIViewController {
     override func viewDidLoad() {
@@ -141,6 +138,22 @@ class MainViewController: UIViewController {
 
         AppearanceService.register(stakeholder: self, selector: #selector(makeUp))
     }
+
+    @objc private func makeUp() {
+        // UI customs put here
+    }
+}
+```
+
+Step 4: import PerseusUISystemKit and put all UI customs into makeUp() method
+
+```swift
+import PerseusDarkMode
+import PerseusUISystemKit
+
+class MainViewController: UIViewController {
+
+    // ... code
 
     @objc private func makeUp() {
         print("^_^ \(DarkMode.style) \(UIColor.perseusBlue.RGBA255)")
