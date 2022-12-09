@@ -86,6 +86,69 @@ dependencies: [
 
 It is strongly recommended using "Exact" with the Version field.
 
+## Usage
+
+### Setup
+
+Step 1: import PerseusDarkMode and call makeUp() in app's delegate:
+
+```swift
+import PerseusDarkMode
+
+extension AppDelegate: UIApplicationDelegate {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions
+        launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // ... code
+        
+        AppearanceService.makeUp()
+
+        return true
+    }
+}
+```
+
+Step 2: and only if iOS, so, override method traitCollectionDidChange of the first app's screen, once 
+
+```swift
+import PerseusDarkMode
+
+class MainViewController: UIViewController {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if #available(iOS 13.0, *) {
+            AppearanceService.processTraitCollectionDidChange(previousTraitCollection)
+        }
+    }
+}
+```
+
+### Using
+
+Step 3: import PerseusUISystemKit and register a view controller of a screen
+Step 4: then put all UI customs into makeUp() mathod of a registered view controller
+
+```swift
+import PerseusDarkMode
+import PerseusUISystemKit
+
+class MainViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        AppearanceService.register(stakeholder: self, selector: #selector(makeUp))
+    }
+
+    @objc private func makeUp() {
+        print("^_^ \(AppearanceService.DarkModeUserChoice)"
+
+        view.backgroundColor = .perseusBlue
+    }
+}
+```
+
 ## License MIT
 
 Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
