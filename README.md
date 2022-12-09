@@ -43,6 +43,40 @@ This library brings a developer some modern but simple tools like system and sem
 
 - [SwiftLint Shell Script Runner](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/eae74253eb86cacf38d5363d19042c4ebe951d34/SucceedsPostAction.sh)
 
+## Installation
+
+### Standalone 
+
+Make a copy of the file [`PerseusUISystemKitSingle.swift`](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/6dfadf409147fd736c20c5280e30e500fbcf0f81/PerseusUISystemKitSingle.swift) then put it into a place required of a host project.
+
+### CocoaPods
+
+Podfile should contain:
+
+```ruby
+target "ProjectTarget" do
+  use_frameworks!
+  pod 'PerseusUISystemKit', '1.1.0'
+end
+```
+
+### Swift Package Manager
+
+- As a package dependency so Package.swift should contain the following statements:
+
+```swift
+dependencies: [
+        .package(url: "https://github.com/perseusrealdeal/PerseusUISystemKit.git",
+            .exact("1.1.0"))
+    ],
+```
+
+- As an Xcode project dependency: 
+
+`Project in the Navigator > Package Dependencies > Add Package Dependency`
+
+It is strongly recommended using "Exact" with the Version field.
+
 ## License MIT
 
 Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
