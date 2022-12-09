@@ -26,7 +26,7 @@
 
 ## In Brief
 
-This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image, all used with Perseus Dark Mode in runtime to make Dark Mode sensitive UI up.
+This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image, all used with Perseus Dark Mode in runtime to make Dark Mode sensitive UI up. In more detail have a look at wiki.
 
 ## Reqirements
 
@@ -149,6 +149,8 @@ class MainViewController: UIViewController {
     }
 }
 ```
+
+There is another way to be notified of Dark Mode changed, KVO. To learn have a look at wiki.
 
 ## License MIT
 
