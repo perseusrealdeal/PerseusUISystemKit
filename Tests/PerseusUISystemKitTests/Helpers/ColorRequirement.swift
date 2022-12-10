@@ -2,141 +2,141 @@
 //  ColorRequirement.swift
 //  PerseusUISystemKitTests
 //
-//  Created by Mikhail Zhigulin in 2022.
+//  Created by Mikhail Zhigulin in 7530.
 //
-//  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+//  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
+//
 //  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
 
-#if !os(macOS)
-import UIKit
-#endif
+import Foundation
 
-@testable import PerseusUISystemKit
+public enum ColorRequirement {
 
-enum ColorRequirement {
-    case label
-    case secondaryLabel
-    case tertiaryLabel
-    case quaternaryLabel
-    case placeholderText
-    case separator
-    case opaqueSeparator
-    case link
+    // MARK: - Semantics
 
-    case systemFill
-    case secondarySystemFill
-    case tertiarySystemFill
-    case quaternarySystemFill
+    case labelPerseus
+    case secondaryLabelPerseus
+    case tertiaryLabelPerseus
+    case quaternaryLabelPerseus
+    case placeholderTextPerseus
+    case separatorPerseus
+    case opaqueSeparatorPerseus
+    case linkPerseus
 
-    case systemBackground
-    case secondarySystemBackground
-    case tertiarySystemBackground
+    case systemFillPerseus
+    case secondarySystemFillPerseus
+    case tertiarySystemFillPerseus
+    case quaternarySystemFillPerseus
 
-    case systemGroupedBackground
-    case secondarySystemGroupedBackground
-    case tertiarySystemGroupedBackground
+    case systemBackgroundPerseus
+    case secondarySystemBackgroundPerseus
+    case tertiarySystemBackgroundPerseus
 
-    case systemRed
-    case systemOrange
-    case systemYellow
-    case systemGreen
-    case systemMint
-    case systemTeal
-    case systemCyan
-    case systemBlue
-    case systemIndigo
-    case systemPurple
-    case systemPink
-    case systemBrown
+    case systemGroupedBackgroundPerseus
+    case secondarySystemGroupedBackgroundPerseus
+    case tertiarySystemGroupedBackgroundPerseus
 
-    case systemGray
-    case systemGray2
-    case systemGray3
-    case systemGray4
-    case systemGray5
-    case systemGray6
+    // MARK: - Systems
 
-    var color: UIColor {
+    case perseusRed
+    case perseusOrange
+    case perseusYellow
+    case perseusGreen
+    case perseusMint
+    case perseusTeal
+    case perseusCyan
+    case perseusBlue
+    case perseusIndigo
+    case perseusPurple
+    case perseusPink
+    case perseusBrown
+
+    case perseusGray
+    case perseusGray2
+    case perseusGray3
+    case perseusGray4
+    case perseusGray5
+    case perseusGray6
+
+    // MARK: - Color
+
+    var color: Color {
         switch self {
-        case .label:
-            return .label_Adapted
-        case .secondaryLabel:
-            return .secondaryLabel_Adapted
-        case .tertiaryLabel:
-            return .tertiaryLabel_Adapted
-        case .quaternaryLabel:
-            return .quaternaryLabel_Adapted
-        case .placeholderText:
-            return .placeholderText_Adapted
-        case .separator:
-            return .separator_Adapted
-        case .opaqueSeparator:
-            return .opaqueSeparator_Adapted
-        case .link:
-            return .link_Adapted
+        case .labelPerseus:
+            return .labelPerseus
+        case .secondaryLabelPerseus:
+            return .secondaryLabelPerseus
+        case .tertiaryLabelPerseus:
+            return .tertiaryLabelPerseus
+        case .quaternaryLabelPerseus:
+            return .quaternaryLabelPerseus
+        case .placeholderTextPerseus:
+            return .placeholderTextPerseus
+        case .separatorPerseus:
+            return .separatorPerseus
+        case .opaqueSeparatorPerseus:
+            return .opaqueSeparatorPerseus
+        case .linkPerseus:
+            return .linkPerseus
+        case .systemFillPerseus:
+            return .systemFillPerseus
+        case .secondarySystemFillPerseus:
+            return .secondarySystemFillPerseus
+        case .tertiarySystemFillPerseus:
+            return .tertiarySystemFillPerseus
+        case .quaternarySystemFillPerseus:
+            return .quaternarySystemFillPerseus
+        case .systemBackgroundPerseus:
+            return .systemBackgroundPerseus
+        case .secondarySystemBackgroundPerseus:
+            return .secondarySystemBackgroundPerseus
+        case .tertiarySystemBackgroundPerseus:
+            return .tertiarySystemBackgroundPerseus
+        case .systemGroupedBackgroundPerseus:
+            return .systemGroupedBackgroundPerseus
+        case .secondarySystemGroupedBackgroundPerseus:
+            return .secondarySystemGroupedBackgroundPerseus
+        case .tertiarySystemGroupedBackgroundPerseus:
+            return .tertiarySystemGroupedBackgroundPerseus
 
-        case .systemFill:
-            return .systemFill_Adapted
-        case .secondarySystemFill:
-            return .secondarySystemFill_Adapted
-        case .tertiarySystemFill:
-            return .tertiarySystemFill_Adapted
-        case .quaternarySystemFill:
-            return .quaternarySystemFill_Adapted
-
-        case .systemBackground:
-            return .systemBackground_Adapted
-        case .secondarySystemBackground:
-            return .secondarySystemBackground_Adapted
-        case .tertiarySystemBackground:
-            return .tertiarySystemBackground_Adapted
-
-        case .systemGroupedBackground:
-            return .systemGroupedBackground_Adapted
-        case .secondarySystemGroupedBackground:
-            return .secondarySystemGroupedBackground_Adapted
-        case .tertiarySystemGroupedBackground:
-            return .tertiarySystemGroupedBackground_Adapted
-
-        case .systemRed:
-            return .systemRed_Adapted
-        case .systemOrange:
-            return .systemOrange_Adapted
-        case .systemYellow:
-            return .systemYellow_Adapted
-        case .systemGreen:
-            return .systemGreen_Adapted
-        case .systemMint:
-            return .systemMint_Adapted
-        case .systemTeal:
-            return .systemTeal_Adapted
-        case .systemCyan:
-            return .systemCyan_Adapted
-        case .systemBlue:
-            return .systemBlue_Adapted
-        case .systemIndigo:
-            return .systemIndigo_Adapted
-        case .systemPurple:
-            return .systemPurple_Adapted
-        case .systemPink:
-            return .systemPink_Adapted
-        case .systemBrown:
-            return .systemBrown_Adapted
-
-        case .systemGray:
-            return .systemGray_Adapted
-        case .systemGray2:
-            return .systemGray2_Adapted
-        case .systemGray3:
-            return .systemGray3_Adapted
-        case .systemGray4:
-            return .systemGray4_Adapted
-        case .systemGray5:
-            return .systemGray5_Adapted
-        case .systemGray6:
-            return .systemGray6_Adapted
+        case .perseusRed:
+            return .perseusRed
+        case .perseusOrange:
+            return .perseusOrange
+        case .perseusYellow:
+            return .perseusYellow
+        case .perseusGreen:
+            return .perseusGreen
+        case .perseusMint:
+            return .perseusMint
+        case .perseusTeal:
+            return .perseusTeal
+        case .perseusCyan:
+            return .perseusCyan
+        case .perseusBlue:
+            return .perseusBlue
+        case .perseusIndigo:
+            return .perseusIndigo
+        case .perseusPurple:
+            return .perseusPurple
+        case .perseusPink:
+            return .perseusPink
+        case .perseusBrown:
+            return .perseusBrown
+        case .perseusGray:
+            return .perseusGray
+        case .perseusGray2:
+            return .perseusGray2
+        case .perseusGray3:
+            return .perseusGray3
+        case .perseusGray4:
+            return .perseusGray4
+        case .perseusGray5:
+            return .perseusGray5
+        case .perseusGray6:
+            return .perseusGray6
         }
     }
 }

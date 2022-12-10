@@ -1,21 +1,22 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.1
 /* Package.swift
 
- Created by Mikhail Zhigulin in 2022.
+ Created by Mikhail Zhigulin in 7530.
 
- Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+ Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
+
  Licensed under the MIT license. See LICENSE file.
  All rights reserved.
 
  Abstract:
- Package manifest for Perseus UISystemKit.
+ Package manifest for Perseus UI System Kit.
 */
 
 import PackageDescription
 
 let package = Package(
     name: "PerseusUISystemKit",
-    platforms: [.iOS(.v9)],
+    platforms: [.macOS(.v10_10), .iOS(.v9)],
     products: [
         .library(
             name: "PerseusUISystemKit",
@@ -23,7 +24,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusDarkMode.git",
-            .exact("1.0.4"))
+            .exact("1.1.1"))
     ],
     targets: [
         .target(

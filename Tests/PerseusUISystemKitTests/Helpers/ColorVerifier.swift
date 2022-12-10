@@ -2,40 +2,40 @@
 //  ColorVerifier.swift
 //  PerseusUISystemKitTests
 //
-//  Created by Mikhail Zhigulin in 2022.
+//  Created by Mikhail Zhigulin in 7530.
 //
-//  Copyright (c) 2022 Mikhail Zhigulin of Novosibirsk.
+//  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
+//
 //  Licensed under the MIT license. See LICENSE file.
 //  All rights reserved.
 //
 
-#if !os(macOS)
+#if canImport(UIKit)
 import UIKit
+#elseif canImport(Cocoa)
+import Cocoa
 #endif
 
 import XCTest
+
 @testable import PerseusDarkMode
 @testable import PerseusUISystemKit
 
+#if os(iOS)
+public typealias Color = UIColor
+#elseif os(macOS)
+public typealias Color = NSColor
+#endif
+
 final class ColorVerifier {
-    class func verify(requirement: ColorRequirement,
-                      _ requiredLight: UIColor?,
-                      _ requiredDark: UIColor?,
-                      _ iOS13color: UIColor?,
+    class func verify(required: ColorRequirement, _ light: Color, _ dark: Color,
                       file: StaticString = #file,
                       line: UInt = #line) {
-        if #available(iOS 13.0, *), iOS13color != nil {
-            XCTAssertEqual(requirement.color, iOS13color)
-        } else {
-            AppearanceService.DarkModeUserChoice = .off
-            AppearanceService.makeUp()
 
-            XCTAssertEqual(requirement.color, requiredLight)
+        AppearanceService.DarkModeUserChoice = .off
+        XCTAssertEqual(required.color, light)
 
-            AppearanceService.DarkModeUserChoice = .on
-            AppearanceService.makeUp()
-
-            XCTAssertEqual(requirement.color, requiredDark)
-        }
+        AppearanceService.DarkModeUserChoice = .on
+        XCTAssertEqual(required.color, dark)
     }
 }
