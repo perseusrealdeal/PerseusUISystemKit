@@ -2,7 +2,7 @@
 //  PerseusUISystemKitSingle.swift
 //  Version: 1.1.0
 //
-//  Contains Dependency PerseusDarkModeSingle v1.1.0
+//  Contains Dependency PerseusDarkModeSingle v1.1.1
 //
 //  Created by Mikhail Zhigulin in 7530.
 //
@@ -54,7 +54,7 @@ public typealias ImageView = NSImageView
 public typealias Image = NSImage
 #endif
 
-// MARK: - PerseusDarkModeSingle v1.1.0
+// MARK: - PerseusDarkModeSingle v1.1.1
 
 // MARK: - Constants
 

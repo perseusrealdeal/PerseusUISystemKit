@@ -16,7 +16,7 @@
 
 ## Dependencies
 
-[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.0-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.0)
+[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.1-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.1)
 
 ## Demo Apps and Others
 
