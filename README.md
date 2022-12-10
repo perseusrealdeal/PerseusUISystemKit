@@ -9,7 +9,7 @@
 
 ## Integration Capabilities
 
-[![Standalone File](https://img.shields.io/badge/Standalone%20File-available-informational.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/f7ba6e135e200ffb10cfc3699e01941f05b93ce6/PerseusUISystemKitSingle.swift)
+[![Standalone File](https://img.shields.io/badge/Standalone%20File-available-informational.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/af771837073857e7103cfed9d292376f4dbf16f7/PerseusUISystemKitSingle.swift)
 [![CocoaPods manager](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://cocoapods.org)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg)](https://github.com/apple/swift-package-manager)
@@ -47,7 +47,7 @@ This library brings a developer some modern but simple tools like system and sem
 
 ### Standalone 
 
-Make a copy of the file [`PerseusUISystemKitSingle.swift`](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/f7ba6e135e200ffb10cfc3699e01941f05b93ce6/PerseusUISystemKitSingle.swift) then put it into a place required of a host project.
+Make a copy of the file [`PerseusUISystemKitSingle.swift`](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/af771837073857e7103cfed9d292376f4dbf16f7/PerseusUISystemKitSingle.swift) then put it into a place required of a host project.
 
 ### CocoaPods
 
