@@ -2,8 +2,8 @@ Pod::Spec.new do |p|
 
 p.name           = "PerseusUISystemKit"
 p.version        = "1.1.0"
-p.summary        = "Modern features for early iOS and macOS devices."
-p.description    = "Colors system and semantic, DarkModeImageView that are sensitive to Dark Mode."
+p.summary        = "Modern features for early Apple devices."
+p.description    = "Dark Mode sensitive colours system and semantic, dynamic image."
 p.homepage       = "https://github.com/perseusrealdeal/PerseusUISystemKit"
 
 p.license        = { :type => "MIT", :file => "LICENSE" }
@@ -11,7 +11,7 @@ p.author         = { "perseusrealdeal" => "mzhigulin@gmail.com" }
 
 p.source         = { :git => "https://github.com/perseusrealdeal/PerseusUISystemKit.git", :tag => p.version.to_s }
 p.platform       = :ios, '9.3'
-p.platform       = :osx, '10.9'
+p.platform       = :osx, '10.10'
 p.swift_version  = "4.2"
 p.requires_arc   = true
 
