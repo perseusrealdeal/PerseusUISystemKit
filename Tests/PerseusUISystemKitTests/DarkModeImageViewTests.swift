@@ -24,8 +24,11 @@ final class DarkModeImageViewTests: XCTestCase {
 
         XCTAssertNil(sut.imageLight)
         XCTAssertNil(sut.imageDark)
+
+#if os(iOS)
         XCTAssertNil(sut.light)
         XCTAssertNil(sut.dark)
+#endif
 
         XCTAssertNil(sut.image)
 
@@ -44,8 +47,10 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // assert
 
+#if os(iOS)
         XCTAssertNotNil(sut.light)
         XCTAssertNotNil(sut.dark)
+#endif
 
         XCTAssertNotNil(sut.image)
     }
@@ -158,11 +163,13 @@ final class DarkModeImageViewTests: XCTestCase {
 
         XCTAssertEqual(sut.image, light)
 
-        XCTAssertEqual(sut.light, light)
         XCTAssertEqual(sut.imageLight, light)
-
-        XCTAssertEqual(sut.dark, dark)
         XCTAssertEqual(sut.imageDark, dark)
+
+#if os(iOS)
+        XCTAssertEqual(sut.light, light)
+        XCTAssertEqual(sut.dark, dark)
+#endif
     }
 
     func test_interface_builder_image_should_be_dark_if_style_is_dark() {
@@ -185,11 +192,13 @@ final class DarkModeImageViewTests: XCTestCase {
 
         XCTAssertEqual(sut.image, dark)
 
-        XCTAssertEqual(sut.light, light)
         XCTAssertEqual(sut.imageLight, light)
-
-        XCTAssertEqual(sut.dark, dark)
         XCTAssertEqual(sut.imageDark, dark)
+
+#if os(iOS)
+        XCTAssertEqual(sut.light, light)
+        XCTAssertEqual(sut.dark, dark)
+#endif
     }
 
     func test_interface_builder_should_be_light_if_style_changed_to_light() {

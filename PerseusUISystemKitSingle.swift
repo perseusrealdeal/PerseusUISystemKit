@@ -46,12 +46,8 @@ import Cocoa
 
 #if os(iOS)
 public typealias Color = UIColor
-public typealias ImageView = UIImageView
-public typealias Image = UIImage
 #elseif os(macOS)
 public typealias Color = NSColor
-public typealias ImageView = NSImageView
-public typealias Image = NSImage
 #endif
 
 // MARK: - PerseusDarkModeSingle v1.1.2
