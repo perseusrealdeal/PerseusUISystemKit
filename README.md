@@ -1,8 +1,8 @@
 # Perseus UI System Kit
 
 [![Actions Status](https://github.com/perseusrealdeal/PerseusUISystemKit/actions/workflows/main.yml/badge.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/actions)
-![Version](https://img.shields.io/badge/Version-1.1.1-informational.svg)
-![Pod](https://img.shields.io/badge/Pod-1.1.1-informational.svg)
+![Version](https://img.shields.io/badge/Version-1.1.2-informational.svg)
+![Pod](https://img.shields.io/badge/Pod-1.1.2-informational.svg)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%209.3+,%20macOS%2010.10+-orange.svg)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-red.svg)](https://docs.swift.org/swift-book/RevisionHistory/RevisionHistory.html)
 [![License](http://img.shields.io/:License-MIT-blue.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/6dfadf409147fd736c20c5280e30e500fbcf0f81/LICENSE)
@@ -56,7 +56,7 @@ Podfile should contain:
 ```ruby
 target "ProjectTarget" do
   use_frameworks!
-  pod 'PerseusUISystemKit', '1.1.1'
+  pod 'PerseusUISystemKit', '1.1.2'
 end
 ```
 ### Carthage
@@ -65,7 +65,7 @@ Carfile should contain:
 
 ```carthage
 github "perseusrealdeal/PerseusDarkMode" == 1.1.2
-github "perseusrealdeal/PerseusUISystemKit" == 1.1.1
+github "perseusrealdeal/PerseusUISystemKit" == 1.1.2
 ```
 [HowTo](https://gist.github.com/perseusrealdeal/8951b10f4330325df6347aaaa79d3cf2) add swift package to a host project with Carthage.
 
@@ -76,7 +76,7 @@ github "perseusrealdeal/PerseusUISystemKit" == 1.1.1
 ```swift
 dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusUISystemKit.git",
-            .exact("1.1.1"))
+            .exact("1.1.2"))
     ],
 ```
 
