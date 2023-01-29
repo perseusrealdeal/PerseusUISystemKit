@@ -18,24 +18,37 @@ import XCTest
 @testable import PerseusUISystemKit
 
 final class DarkModeImageViewTests: XCTestCase {
+
     func test_init() {
+
+        // arrange
+
         let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 1, height: 1))
         let sut = DarkModeImageView(frame: frame)
 
+        let objectToObserve = sut.darkModeObserver?.objectToObserve as AnyObject
+        let observeredObject = AppearanceService.shared as AnyObject
+
         XCTAssertNil(sut.imageLight)
         XCTAssertNil(sut.imageDark)
+        XCTAssertNil(sut.image)
+
+        // assert
 
 #if os(iOS)
         XCTAssertNil(sut.light)
         XCTAssertNil(sut.dark)
+
+        XCTAssertEqual(ObjectIdentifier(objectToObserve), ObjectIdentifier(observeredObject))
 #endif
 
-        XCTAssertNil(sut.image)
-
-        XCTAssertIdentical(sut.darkModeObserver?.objectToObserve, AppearanceService.shared)
+#if os(macOS)
+        XCTAssertEqual(objectToObserve.objectID, observeredObject.objectID)
+#endif
     }
 
     func test_setUp() {
+
         // arrange
 
         let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 1, height: 1))

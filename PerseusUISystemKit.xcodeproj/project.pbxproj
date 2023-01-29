@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"PerseusUISystemKit::PerseusUISystemKitPackageTests::ProductTarget" /* PerseusUISystemKitPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_83 /* Build configuration list for PBXAggregateTarget "PerseusUISystemKitPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_86 /* PBXTargetDependency */,
+			);
+			name = PerseusUISystemKitPackageTests;
+			productName = PerseusUISystemKitPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_100 /* PerseusDarkMode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PerseusDarkMode::PerseusDarkMode::Product" /* PerseusDarkMode.framework */; };
+		OBJ_48 /* AppearanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* AppearanceService.swift */; };
+		OBJ_49 /* AppearanceStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* AppearanceStyle.swift */; };
+		OBJ_50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Constants.swift */; };
+		OBJ_51 /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* DarkMode.swift */; };
+		OBJ_52 /* DarkModeDecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* DarkModeDecision.swift */; };
+		OBJ_53 /* DarkModeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* DarkModeObserver.swift */; };
+		OBJ_54 /* DarkModeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* DarkModeOption.swift */; };
+		OBJ_61 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Package.swift */; };
+		OBJ_67 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ColorHelper.swift */; };
+		OBJ_68 /* DarkModeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* DarkModeImageView.swift */; };
+		OBJ_69 /* SemanticColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SemanticColors.swift */; };
+		OBJ_70 /* SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SystemColors.swift */; };
+		OBJ_71 /* SemanticColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* SemanticColorProtocol.swift */; };
+		OBJ_72 /* SystemColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* SystemColorProtocol.swift */; };
+		OBJ_74 /* PerseusDarkMode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PerseusDarkMode::PerseusDarkMode::Product" /* PerseusDarkMode.framework */; };
+		OBJ_81 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_92 /* DarkModeImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* DarkModeImageViewTests.swift */; };
+		OBJ_93 /* ColorRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ColorRequirement.swift */; };
+		OBJ_94 /* ColorVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ColorVerifier.swift */; };
+		OBJ_95 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* ImageHelper.swift */; };
+		OBJ_96 /* SemanticColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* SemanticColorsTests.swift */; };
+		OBJ_97 /* SystemColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* SystemColorsTests.swift */; };
+		OBJ_99 /* PerseusUISystemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PerseusUISystemKit::PerseusUISystemKit::Product" /* PerseusUISystemKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BF2FC212986DABE0047ABC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PerseusDarkMode::PerseusDarkMode";
+			remoteInfo = PerseusDarkMode;
+		};
+		4BF2FC222986DABE0047ABC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PerseusUISystemKit::PerseusUISystemKit";
+			remoteInfo = PerseusUISystemKit;
+		};
+		4BF2FC232986DABE0047ABC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PerseusDarkMode::PerseusDarkMode";
+			remoteInfo = PerseusDarkMode;
+		};
+		4BF2FC242986DAC00047ABC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PerseusUISystemKit::PerseusUISystemKitTests";
+			remoteInfo = PerseusUISystemKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BF2FC26298708710047ABC2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4BF2FC27298708780047ABC2 /* PerseusUISystemKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PerseusUISystemKit.podspec; sourceTree = "<group>"; };
+		4BF2FC2A2987089C0047ABC2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4BF2FC2B298708A30047ABC2 /* SucceedsPostAction.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SucceedsPostAction.sh; sourceTree = "<group>"; };
+		4BF2FC2C298708B60047ABC2 /* main.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.yml; path = .github/workflows/main.yml; sourceTree = "<group>"; };
+		4BF2FC2D298708BF0047ABC2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4BF2FC2E298708C40047ABC2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		OBJ_10 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		OBJ_11 /* DarkModeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeImageView.swift; sourceTree = "<group>"; };
+		OBJ_12 /* SemanticColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticColors.swift; sourceTree = "<group>"; };
+		OBJ_13 /* SystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColors.swift; sourceTree = "<group>"; };
+		OBJ_15 /* SemanticColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticColorProtocol.swift; sourceTree = "<group>"; };
+		OBJ_16 /* SystemColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColorProtocol.swift; sourceTree = "<group>"; };
+		OBJ_19 /* DarkModeImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeImageViewTests.swift; sourceTree = "<group>"; };
+		OBJ_21 /* ColorRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRequirement.swift; sourceTree = "<group>"; };
+		OBJ_22 /* ColorVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorVerifier.swift; sourceTree = "<group>"; };
+		OBJ_23 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		OBJ_24 /* SemanticColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticColorsTests.swift; sourceTree = "<group>"; };
+		OBJ_25 /* SystemColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColorsTests.swift; sourceTree = "<group>"; };
+		OBJ_30 /* AppearanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceService.swift; sourceTree = "<group>"; };
+		OBJ_31 /* AppearanceStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceStyle.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		OBJ_34 /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
+		OBJ_35 /* DarkModeDecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeDecision.swift; sourceTree = "<group>"; };
+		OBJ_36 /* DarkModeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeObserver.swift; sourceTree = "<group>"; };
+		OBJ_37 /* DarkModeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeOption.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/mikhailzhigulin/Documents/GitHub/PerseusUISystemKit/.build/checkouts/PerseusDarkMode.git--2267782763514452731/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		"PerseusDarkMode::PerseusDarkMode::Product" /* PerseusDarkMode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerseusDarkMode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PerseusUISystemKit::PerseusUISystemKit::Product" /* PerseusUISystemKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerseusUISystemKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PerseusUISystemKit::PerseusUISystemKitTests::Product" /* PerseusUISystemKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PerseusUISystemKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_74 /* PerseusDarkMode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_99 /* PerseusUISystemKit.framework in Frameworks */,
+				OBJ_100 /* PerseusDarkMode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_14 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* SemanticColorProtocol.swift */,
+				OBJ_16 /* SystemColorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		OBJ_17 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* PerseusUISystemKitTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* PerseusUISystemKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* Helpers */,
+				OBJ_19 /* DarkModeImageViewTests.swift */,
+				OBJ_24 /* SemanticColorsTests.swift */,
+				OBJ_25 /* SystemColorsTests.swift */,
+			);
+			name = PerseusUISystemKitTests;
+			path = Tests/PerseusUISystemKitTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* ColorRequirement.swift */,
+				OBJ_22 /* ColorVerifier.swift */,
+				OBJ_23 /* ImageHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* PerseusDarkMode */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_27 /* PerseusDarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* PerseusDarkMode */,
+				OBJ_38 /* Package.swift */,
+			);
+			name = PerseusDarkMode;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_28 /* PerseusDarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_29 /* AppearanceService */,
+				OBJ_32 /* DarkMode */,
+			);
+			name = PerseusDarkMode;
+			path = ".build/checkouts/PerseusDarkMode.git--2267782763514452731/Sources/PerseusDarkMode";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_29 /* AppearanceService */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* AppearanceService.swift */,
+				OBJ_31 /* AppearanceStyle.swift */,
+			);
+			path = AppearanceService;
+			sourceTree = "<group>";
+		};
+		OBJ_32 /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* Constants.swift */,
+				OBJ_34 /* DarkMode.swift */,
+				OBJ_35 /* DarkModeDecision.swift */,
+				OBJ_36 /* DarkModeObserver.swift */,
+				OBJ_37 /* DarkModeOption.swift */,
+			);
+			path = DarkMode;
+			sourceTree = "<group>";
+		};
+		OBJ_39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"PerseusUISystemKit::PerseusUISystemKit::Product" /* PerseusUISystemKit.framework */,
+				"PerseusDarkMode::PerseusDarkMode::Product" /* PerseusDarkMode.framework */,
+				"PerseusUISystemKit::PerseusUISystemKitTests::Product" /* PerseusUISystemKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				4BF2FC2C298708B60047ABC2 /* main.yml */,
+				4BF2FC26298708710047ABC2 /* LICENSE */,
+				4BF2FC2A2987089C0047ABC2 /* README.md */,
+				4BF2FC2D298708BF0047ABC2 /* .gitignore */,
+				4BF2FC2E298708C40047ABC2 /* .swiftlint.yml */,
+				OBJ_6 /* Package.swift */,
+				4BF2FC2B298708A30047ABC2 /* SucceedsPostAction.sh */,
+				4BF2FC27298708780047ABC2 /* PerseusUISystemKit.podspec */,
+				OBJ_7 /* Sources */,
+				OBJ_17 /* Tests */,
+				OBJ_26 /* Dependencies */,
+				OBJ_39 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* PerseusUISystemKit */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* PerseusUISystemKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Classes */,
+				OBJ_14 /* Protocols */,
+			);
+			name = PerseusUISystemKit;
+			path = Sources/PerseusUISystemKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* ColorHelper.swift */,
+				OBJ_11 /* DarkModeImageView.swift */,
+				OBJ_12 /* SemanticColors.swift */,
+				OBJ_13 /* SystemColors.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"PerseusDarkMode::PerseusDarkMode" /* PerseusDarkMode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_44 /* Build configuration list for PBXNativeTarget "PerseusDarkMode" */;
+			buildPhases = (
+				OBJ_47 /* Sources */,
+				OBJ_55 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerseusDarkMode;
+			productName = PerseusDarkMode;
+			productReference = "PerseusDarkMode::PerseusDarkMode::Product" /* PerseusDarkMode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PerseusDarkMode::SwiftPMPackageDescription" /* PerseusDarkModePackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_57 /* Build configuration list for PBXNativeTarget "PerseusDarkModePackageDescription" */;
+			buildPhases = (
+				OBJ_60 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerseusDarkModePackageDescription;
+			productName = PerseusDarkModePackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"PerseusUISystemKit::PerseusUISystemKit" /* PerseusUISystemKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_63 /* Build configuration list for PBXNativeTarget "PerseusUISystemKit" */;
+			buildPhases = (
+				OBJ_66 /* Sources */,
+				OBJ_73 /* Frameworks */,
+				4BF2FC25298707630047ABC2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_75 /* PBXTargetDependency */,
+			);
+			name = PerseusUISystemKit;
+			productName = PerseusUISystemKit;
+			productReference = "PerseusUISystemKit::PerseusUISystemKit::Product" /* PerseusUISystemKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PerseusUISystemKit::PerseusUISystemKitTests" /* PerseusUISystemKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_88 /* Build configuration list for PBXNativeTarget "PerseusUISystemKitTests" */;
+			buildPhases = (
+				OBJ_91 /* Sources */,
+				OBJ_98 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_101 /* PBXTargetDependency */,
+				OBJ_102 /* PBXTargetDependency */,
+			);
+			name = PerseusUISystemKitTests;
+			productName = PerseusUISystemKitTests;
+			productReference = "PerseusUISystemKit::PerseusUISystemKitTests::Product" /* PerseusUISystemKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"PerseusUISystemKit::SwiftPMPackageDescription" /* PerseusUISystemKitPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_77 /* Build configuration list for PBXNativeTarget "PerseusUISystemKitPackageDescription" */;
+			buildPhases = (
+				OBJ_80 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerseusUISystemKitPackageDescription;
+			productName = PerseusUISystemKitPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "PerseusUISystemKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"PerseusDarkMode::PerseusDarkMode" /* PerseusDarkMode */,
+				"PerseusDarkMode::SwiftPMPackageDescription" /* PerseusDarkModePackageDescription */,
+				"PerseusUISystemKit::PerseusUISystemKit" /* PerseusUISystemKit */,
+				"PerseusUISystemKit::SwiftPMPackageDescription" /* PerseusUISystemKitPackageDescription */,
+				"PerseusUISystemKit::PerseusUISystemKitPackageTests::ProductTarget" /* PerseusUISystemKitPackageTests */,
+				"PerseusUISystemKit::PerseusUISystemKitTests" /* PerseusUISystemKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BF2FC25298707630047ABC2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nif which swiftlint >/dev/null; then\nswiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nexit 1\nfi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_48 /* AppearanceService.swift in Sources */,
+				OBJ_49 /* AppearanceStyle.swift in Sources */,
+				OBJ_50 /* Constants.swift in Sources */,
+				OBJ_51 /* DarkMode.swift in Sources */,
+				OBJ_52 /* DarkModeDecision.swift in Sources */,
+				OBJ_53 /* DarkModeObserver.swift in Sources */,
+				OBJ_54 /* DarkModeOption.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_61 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_67 /* ColorHelper.swift in Sources */,
+				OBJ_68 /* DarkModeImageView.swift in Sources */,
+				OBJ_69 /* SemanticColors.swift in Sources */,
+				OBJ_70 /* SystemColors.swift in Sources */,
+				OBJ_71 /* SemanticColorProtocol.swift in Sources */,
+				OBJ_72 /* SystemColorProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_81 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_92 /* DarkModeImageViewTests.swift in Sources */,
+				OBJ_93 /* ColorRequirement.swift in Sources */,
+				OBJ_94 /* ColorVerifier.swift in Sources */,
+				OBJ_95 /* ImageHelper.swift in Sources */,
+				OBJ_96 /* SemanticColorsTests.swift in Sources */,
+				OBJ_97 /* SystemColorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_101 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PerseusUISystemKit::PerseusUISystemKit" /* PerseusUISystemKit */;
+			targetProxy = 4BF2FC222986DABE0047ABC2 /* PBXContainerItemProxy */;
+		};
+		OBJ_102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PerseusDarkMode::PerseusDarkMode" /* PerseusDarkMode */;
+			targetProxy = 4BF2FC232986DABE0047ABC2 /* PBXContainerItemProxy */;
+		};
+		OBJ_75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PerseusDarkMode::PerseusDarkMode" /* PerseusDarkMode */;
+			targetProxy = 4BF2FC212986DABE0047ABC2 /* PBXContainerItemProxy */;
+		};
+		OBJ_86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PerseusUISystemKit::PerseusUISystemKitTests" /* PerseusUISystemKitTests */;
+			targetProxy = 4BF2FC242986DAC00047ABC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PerseusUISystemKit.xcodeproj/PerseusDarkMode_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PerseusDarkMode;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PerseusDarkMode;
+			};
+			name = Debug;
+		};
+		OBJ_46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PerseusUISystemKit.xcodeproj/PerseusDarkMode_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PerseusDarkMode;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PerseusDarkMode;
+			};
+			name = Release;
+		};
+		OBJ_58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PerseusUISystemKit.xcodeproj/PerseusUISystemKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PerseusUISystemKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PerseusUISystemKit;
+			};
+			name = Debug;
+		};
+		OBJ_65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PerseusUISystemKit.xcodeproj/PerseusUISystemKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PerseusUISystemKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PerseusUISystemKit;
+			};
+			name = Release;
+		};
+		OBJ_78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PerseusUISystemKit.xcodeproj/PerseusUISystemKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PerseusUISystemKitTests;
+			};
+			name = Debug;
+		};
+		OBJ_90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PerseusUISystemKit.xcodeproj/PerseusUISystemKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PerseusUISystemKitTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "PerseusUISystemKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_44 /* Build configuration list for PBXNativeTarget "PerseusDarkMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_45 /* Debug */,
+				OBJ_46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_57 /* Build configuration list for PBXNativeTarget "PerseusDarkModePackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_58 /* Debug */,
+				OBJ_59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_63 /* Build configuration list for PBXNativeTarget "PerseusUISystemKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_64 /* Debug */,
+				OBJ_65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_77 /* Build configuration list for PBXNativeTarget "PerseusUISystemKitPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_78 /* Debug */,
+				OBJ_79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_83 /* Build configuration list for PBXAggregateTarget "PerseusUISystemKitPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_84 /* Debug */,
+				OBJ_85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_88 /* Build configuration list for PBXNativeTarget "PerseusUISystemKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_89 /* Debug */,
+				OBJ_90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
