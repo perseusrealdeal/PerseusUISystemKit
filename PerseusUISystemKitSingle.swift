@@ -2,7 +2,7 @@
 //  PerseusUISystemKitSingle.swift
 //  Version: 1.1.2
 //
-//  Contains Dependency PerseusDarkModeSingle v1.1.2
+//  Contains Dependency PerseusDarkModeSingle v1.1.3
 //
 //  Created by Mikhail Zhigulin in 7530.
 //
@@ -45,21 +45,23 @@ import Cocoa
 #endif
 
 #if os(iOS)
+public typealias Responder = UIResponder
 public typealias Color = UIColor
 #elseif os(macOS)
+public typealias Responder = NSResponder
 public typealias Color = NSColor
 #endif
 
-// MARK: - PerseusDarkModeSingle v1.1.2
+// MARK: - PerseusDarkModeSingle v1.1.3
 
 // MARK: - Constants
 
 public extension Notification.Name {
     static let MakeAppearanceUpNotification = Notification.Name("MakeAppearanceUpNotification")
-#if os(macOS)
+    #if os(macOS)
     static let AppleInterfaceThemeChangedNotification =
         Notification.Name("AppleInterfaceThemeChangedNotification")
-#endif
+    #endif
 }
 
 public let DARK_MODE_USER_CHOICE_KEY = "DarkModeUserChoiceOptionKey"
@@ -81,17 +83,17 @@ public class AppearanceService {
 
     private(set) static var it = { AppearanceService() }()
     private init() {
-#if os(macOS)
+        #if os(macOS)
         AppearanceService.distributedNCenter.addObserver(
             self,
             selector: #selector(interfaceModeChanged),
             name: .AppleInterfaceThemeChangedNotification,
             object: nil
         )
-#endif
+        #endif
     }
 
-#if os(macOS)
+    #if os(macOS)
     @objc internal func interfaceModeChanged() {
         if #available(macOS 10.14, *) {
             AppearanceService.processAppearanceOSDidChange()
@@ -101,30 +103,30 @@ public class AppearanceService {
     @available(macOS 10.14, *)
     public static var defaultDarkAppearanceOS: NSAppearance.Name = .darkAqua
     public static var defaultLightAppearanceOS: NSAppearance.Name = .aqua
-#endif
+    #endif
 
     public static var isEnabled: Bool { return hidden_isEnabled }
 
-#if DEBUG && os(macOS)
+    #if DEBUG && os(macOS)
     /// Used for mocking DistributedNotificationCenter in unit testing.
     public static var distributedNCenter: NotificationCenterProtocol =
         DistributedNotificationCenter.default
-#elseif os(macOS)
+    #elseif os(macOS)
     /// Default Distributed NotificationCenter.
     public static var distributedNCenter = DistributedNotificationCenter.default
-#endif
+    #endif
 
-#if DEBUG // Isolated for unit testing
+    #if DEBUG // Isolated for unit testing
     /// Used for mocking NotificationCenter in unit testing.
     public static var nCenter: NotificationCenterProtocol = NotificationCenter.default
     /// Used for mocking UserDefaults in unit testing.
     public static var ud: UserDefaultsProtocol = UserDefaults.standard
-#else
+    #else
     /// Default NotificationCenter.
     public static var nCenter = NotificationCenter.default
     /// Default UserDefaults.
     public static var ud = UserDefaults.standard
-#endif
+    #endif
 
     public static var DarkModeUserChoice: DarkModeOption {
         get {
@@ -171,7 +173,7 @@ public class AppearanceService {
         hidden_changeManually = false
     }
 
-#if os(iOS)
+    #if os(iOS)
     @available(iOS 13.0, *)
     public static func processTraitCollectionDidChange(
         _ previousTraitCollection: UITraitCollection?) {
@@ -183,13 +185,13 @@ public class AppearanceService {
 
         hidden_systemCalledMakeUp()
     }
-#elseif os(macOS)
+    #elseif os(macOS)
     @available(macOS 10.14, *)
     internal static func processAppearanceOSDidChange() {
         if hidden_changeManually { return }
         hidden_systemCalledMakeUp()
     }
-#endif
+    #endif
 
     // MARK: - Implementation helpers, privates and internals
 
@@ -217,7 +219,7 @@ public class AppearanceService {
     @available(iOS 13.0, macOS 10.14, *)
     internal static func overrideUserInterfaceStyleIfNeeded() {
         if hidden_changeManually == false { return }
-#if os(iOS) && compiler(>=5)
+        #if os(iOS) && compiler(>=5)
         guard let keyWindow = UIWindow.key else { return }
         var overrideStyle: UIUserInterfaceStyle = .unspecified
 
@@ -234,7 +236,7 @@ public class AppearanceService {
 
         keyWindow.overrideUserInterfaceStyle = overrideStyle
 
-#elseif os(macOS)
+        #elseif os(macOS)
         switch DarkModeUserChoice {
         case .auto:
             NSApplication.shared.appearance = nil
@@ -245,7 +247,7 @@ public class AppearanceService {
             NSApplication.shared.appearance =
                 NSAppearance(named: AppearanceService.defaultLightAppearanceOS)
         }
-#endif
+        #endif
     }
 }
 
@@ -264,7 +266,7 @@ public class DarkMode: NSObject {
 
     public var systemStyle: SystemStyle {
         if #available(iOS 13.0, macOS 10.14, *) {
-#if os(iOS)
+            #if os(iOS)
             guard let keyWindow = UIWindow.key else { return .unspecified }
 
             switch keyWindow.traitCollection.userInterfaceStyle {
@@ -278,14 +280,14 @@ public class DarkMode: NSObject {
             @unknown default:
                 return .unspecified
             }
-#elseif os(macOS)
+            #elseif os(macOS)
             if let isDark = UserDefaults.standard.string(forKey: "AppleInterfaceStyle"),
                 isDark == "Dark" {
                 return .dark
             } else {
                 return .light
             }
-#endif
+            #endif
         } else {
             return .unspecified
         }
@@ -568,7 +570,7 @@ public protocol SystemColorProtocol {
     /// - Dark: 172, 142, 104
     static var perseusBrown: Color { get }
 
-// MARK: - System Gray Colors
+    // MARK: - System Gray Colors
 
     /// Gray is .systemGray
     ///
@@ -724,7 +726,7 @@ extension Color: SystemColorProtocol {
 
 public protocol SemanticColorProtocol {
 
-// MARK: - FOREGROUND CONTENT
+    // MARK: - FOREGROUND CONTENT
 
     // MARK: - Label Colors
 
@@ -808,7 +810,7 @@ public protocol SemanticColorProtocol {
     /// - Dark: 118, 118, 128, 0.18
     static var quaternarySystemFillPerseus: Color { get }
 
-// MARK: - BACKGROUND CONTENT
+    // MARK: - BACKGROUND CONTENT
 
     // MARK: - Standard
 
