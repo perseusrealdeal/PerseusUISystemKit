@@ -71,7 +71,7 @@ Some Carthage usage tips placed [here](https://gist.github.com/perseusrealdeal/8
 
 ### Swift Package Manager
 
-- As a package dependency so Package.swift should contain the following statements:
+- As a package dependency Package.swift should contain the following statements:
 
 ```swift
 dependencies: [
