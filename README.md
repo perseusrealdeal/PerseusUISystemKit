@@ -1,8 +1,8 @@
 # Perseus UI System Kit
 
 [![Actions Status](https://github.com/perseusrealdeal/PerseusUISystemKit/actions/workflows/main.yml/badge.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/actions)
-![Version](https://img.shields.io/badge/Version-1.1.2-informational.svg)
-![Pod](https://img.shields.io/badge/Pod-1.1.2-informational.svg)
+[![Version](https://img.shields.io/badge/Version-1.1.2-informational.svg)](/Package.swift)
+[![Pod](https://img.shields.io/badge/Pod-1.1.2-informational.svg)](/PerseusUISystemKit.podspec)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%209.3+,%20macOS%2010.10+-orange.svg)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-red.svg)](https://docs.swift.org/swift-book/RevisionHistory/RevisionHistory.html)
 [![License](http://img.shields.io/:License-MIT-blue.svg)](/LICENSE)
@@ -84,7 +84,7 @@ dependencies: [
 
 `Project in the Navigator > Package Dependencies > Add Package Dependency`
 
-It is strongly recommended using "Exact" with the Version field.
+Using "Exact" with the Version field is strongly recommended.
 
 ## Usage
 
