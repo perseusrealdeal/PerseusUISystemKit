@@ -26,7 +26,7 @@
 
 ## In Brief
 
-> This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image. Features of this library in accord with Perseus Dark Mode can be used to create Dark Mode sensitive UI both for iOS and macOS apps.
+> This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image. Features of this library can be used to create Dark Mode sensitive UI both for iOS and macOS apps.
 
 ## Reqirements
 
@@ -167,7 +167,7 @@ class MainViewController: UIViewController {
 }
 ```
 
-There is another way to be notified of Dark Mode changed, KVO. To learn have a look at wiki or [sample](https://github.com/perseusrealdeal/macos.darkmode.discovery) directly.
+There is another way to be notified of Dark Mode changed, KVO. To learn have a look at [sample](https://github.com/perseusrealdeal/macos.darkmode.discovery) directly.
 
 ## License MIT
 
