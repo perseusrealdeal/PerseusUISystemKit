@@ -25,8 +25,8 @@ public typealias Image = NSImage
 #endif
 
 func createImage() -> Image {
-    View(frame: CGRect(origin: CGPoint(x: 0, y: 0),
-                       size: CGSize(width: 1, height: 1))).asImage()
+    return View(frame: CGRect(origin: CGPoint(x: 0, y: 0),
+                              size: CGSize(width: 1, height: 1))).asImage()
 }
 
 extension View {

@@ -18,21 +18,37 @@ import XCTest
 @testable import PerseusUISystemKit
 
 final class DarkModeImageViewTests: XCTestCase {
+
     func test_init() {
+
+        // arrange
+
         let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 1, height: 1))
         let sut = DarkModeImageView(frame: frame)
 
+        let objectToObserve = sut.darkModeObserver?.objectToObserve as AnyObject
+        let observeredObject = AppearanceService.shared as AnyObject
+
         XCTAssertNil(sut.imageLight)
         XCTAssertNil(sut.imageDark)
+        XCTAssertNil(sut.image)
+
+        // assert
+
+#if os(iOS)
         XCTAssertNil(sut.light)
         XCTAssertNil(sut.dark)
 
-        XCTAssertNil(sut.image)
+        XCTAssertEqual(ObjectIdentifier(objectToObserve), ObjectIdentifier(observeredObject))
+#endif
 
-        XCTAssertIdentical(sut.darkModeObserver?.objectToObserve, AppearanceService.shared)
+#if os(macOS)
+        XCTAssertEqual(objectToObserve.objectID, observeredObject.objectID)
+#endif
     }
 
     func test_setUp() {
+
         // arrange
 
         let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 1, height: 1))
@@ -44,8 +60,10 @@ final class DarkModeImageViewTests: XCTestCase {
 
         // assert
 
+#if os(iOS)
         XCTAssertNotNil(sut.light)
         XCTAssertNotNil(sut.dark)
+#endif
 
         XCTAssertNotNil(sut.image)
     }
@@ -158,11 +176,13 @@ final class DarkModeImageViewTests: XCTestCase {
 
         XCTAssertEqual(sut.image, light)
 
-        XCTAssertEqual(sut.light, light)
         XCTAssertEqual(sut.imageLight, light)
-
-        XCTAssertEqual(sut.dark, dark)
         XCTAssertEqual(sut.imageDark, dark)
+
+#if os(iOS)
+        XCTAssertEqual(sut.light, light)
+        XCTAssertEqual(sut.dark, dark)
+#endif
     }
 
     func test_interface_builder_image_should_be_dark_if_style_is_dark() {
@@ -185,11 +205,13 @@ final class DarkModeImageViewTests: XCTestCase {
 
         XCTAssertEqual(sut.image, dark)
 
-        XCTAssertEqual(sut.light, light)
         XCTAssertEqual(sut.imageLight, light)
-
-        XCTAssertEqual(sut.dark, dark)
         XCTAssertEqual(sut.imageDark, dark)
+
+#if os(iOS)
+        XCTAssertEqual(sut.light, light)
+        XCTAssertEqual(sut.dark, dark)
+#endif
     }
 
     func test_interface_builder_should_be_light_if_style_changed_to_light() {

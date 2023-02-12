@@ -1,6 +1,8 @@
-// swift-tools-version:5.1
-/* Package.swift
+// swift-tools-version:4.2
 
+/* Package.swift
+ Version: 1.1.2
+ 
  Created by Mikhail Zhigulin in 7530.
 
  Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
@@ -16,7 +18,6 @@ import PackageDescription
 
 let package = Package(
     name: "PerseusUISystemKit",
-    platforms: [.macOS(.v10_10), .iOS(.v9)],
     products: [
         .library(
             name: "PerseusUISystemKit",
@@ -24,7 +25,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusDarkMode.git",
-            .exact("1.1.2"))
+            .exact("1.1.3"))
     ],
     targets: [
         .target(

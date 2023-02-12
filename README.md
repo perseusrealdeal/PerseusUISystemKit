@@ -1,22 +1,22 @@
 # Perseus UI System Kit
 
 [![Actions Status](https://github.com/perseusrealdeal/PerseusUISystemKit/actions/workflows/main.yml/badge.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/actions)
-![Version](https://img.shields.io/badge/Version-1.1.1-informational.svg)
-![Pod](https://img.shields.io/badge/Pod-1.1.1-informational.svg)
+[![Version](https://img.shields.io/badge/Version-1.1.2-informational.svg)](/Package.swift)
+[![Pod](https://img.shields.io/badge/Pod-1.1.2-informational.svg)](/PerseusUISystemKit.podspec)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%209.3+,%20macOS%2010.10+-orange.svg)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-red.svg)](https://docs.swift.org/swift-book/RevisionHistory/RevisionHistory.html)
-[![License](http://img.shields.io/:License-MIT-blue.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/6dfadf409147fd736c20c5280e30e500fbcf0f81/LICENSE)
+[![License](http://img.shields.io/:License-MIT-blue.svg)](/LICENSE)
 
 ## Integration Capabilities
 
-[![Standalone File](https://img.shields.io/badge/Standalone%20File-available-informational.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/af771837073857e7103cfed9d292376f4dbf16f7/PerseusUISystemKitSingle.swift)
-[![CocoaPods manager](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://cocoapods.org)
+[![Standalone File](https://img.shields.io/badge/Standalone%20File-available-informational.svg)](/PerseusUISystemKitSingle.swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+[![CocoaPods manager](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://cocoapods.org)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg)](https://github.com/apple/swift-package-manager)
 
 ## Dependencies
 
-[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.2-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.2)
+[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.3-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.3)
 
 ## Demo Apps and Others
 
@@ -26,7 +26,7 @@
 
 ## In Brief
 
-This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image, all used with Perseus Dark Mode in runtime to make Dark Mode sensitive UI up. In more detail have a look at wiki.
+> This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image. Features of this library can be used to create Dark Mode sensitive UI both for iOS and macOS apps.
 
 ## Reqirements
 
@@ -37,17 +37,17 @@ This library brings a developer some modern but simple tools like system and sem
 
 ## First-party software
 
-- [Perseus Dark Mode](https://github.com/perseusrealdeal/PerseusDarkMode.git)
+- [Perseus Dark Mode](https://github.com/perseusrealdeal/PerseusDarkMode.git) / [1.1.3](https://github.com/perseusrealdeal/perseusdarkmode/releases/tag/1.1.3)
 
 ## Third-party software
 
-- [SwiftLint Shell Script Runner](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/eae74253eb86cacf38d5363d19042c4ebe951d34/SucceedsPostAction.sh)
+- [SwiftLint Shell Script Runner](/SucceedsPostAction.sh)
 
 ## Installation
 
 ### Standalone 
 
-Make a copy of the file [`PerseusUISystemKitSingle.swift`](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/af771837073857e7103cfed9d292376f4dbf16f7/PerseusUISystemKitSingle.swift) then put it into a place required of a host project.
+Make a copy of the file [`PerseusUISystemKitSingle.swift`](/PerseusUISystemKitSingle.swift) then put it into a place required of a host project.
 
 ### CocoaPods
 
@@ -56,27 +56,27 @@ Podfile should contain:
 ```ruby
 target "ProjectTarget" do
   use_frameworks!
-  pod 'PerseusUISystemKit', '1.1.1'
+  pod 'PerseusUISystemKit', '1.1.2'
 end
 ```
 ### Carthage
 
-Carfile should contain:
+Cartfile should contain:
 
 ```carthage
-github "perseusrealdeal/PerseusDarkMode" == 1.1.2
-github "perseusrealdeal/PerseusUISystemKit" == 1.1.1
+github "perseusrealdeal/PerseusDarkMode" == 1.1.3
+github "perseusrealdeal/PerseusUISystemKit" == 1.1.2
 ```
-[HowTo](https://gist.github.com/perseusrealdeal/8951b10f4330325df6347aaaa79d3cf2) add swift package to a host project with Carthage.
+Some Carthage usage tips placed [here](https://gist.github.com/perseusrealdeal/8951b10f4330325df6347aaaa79d3cf2).
 
 ### Swift Package Manager
 
-- As a package dependency so Package.swift should contain the following statements:
+- As a package dependency Package.swift should contain the following statements:
 
 ```swift
 dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusUISystemKit.git",
-            .exact("1.1.1"))
+            .exact("1.1.2"))
     ],
 ```
 
@@ -84,7 +84,7 @@ dependencies: [
 
 `Project in the Navigator > Package Dependencies > Add Package Dependency`
 
-It is strongly recommended using "Exact" with the Version field.
+Using "Exact" with the Version field is strongly recommended.
 
 ## Usage
 
@@ -99,12 +99,16 @@ extension AppDelegate: UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         // ... code
-        
+
+        // Call AppearanceService.makeUp() method if AppearanceService.register(:, :)
+        // is taken into account
         AppearanceService.makeUp()
 
-        return true
+        // ... otherwise call AppearanceService.recalculateStyleIfNeeded()
+        // to load DarkMode.style from user defaults
+        // AppearanceService.recalculateStyleIfNeeded()
     }
 }
 ```
@@ -163,7 +167,7 @@ class MainViewController: UIViewController {
 }
 ```
 
-There is another way to be notified of Dark Mode changed, KVO. To learn have a look at wiki.
+There is another way to be notified of Dark Mode changed, KVO. To learn have a look at [sample](https://github.com/perseusrealdeal/macos.darkmode.discovery) directly.
 
 ## License MIT
 
@@ -172,10 +176,10 @@ Copyright © 7530 - 7531 Mikhail Zhigulin of Novosibirsk.
 - The year starts from the creation of the world according to a Slavic calendar.
 - September, the 1st of Slavic year.
 
-Have a look at [LICENSE](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/6dfadf409147fd736c20c5280e30e500fbcf0f81/LICENSE) for details.
+Have a look at [LICENSE](/LICENSE) for details.
 
 ## Author and Acknowledgments
 
 `PerseusUISystemKit` was written at Novosibirsk by Mikhail Zhigulin i.e. me, mzhigulin@gmail.com.
 
-Mostly I'd like thank my lovely parents for supporting me in all my ways.
+> Mostly I'd like thank my lovely parents for supporting me in all my ways.

@@ -1,8 +1,8 @@
 //
 //  PerseusUISystemKitSingle.swift
-//  Version: 1.1.1
+//  Version: 1.1.2
 //
-//  Contains Dependency PerseusDarkModeSingle v1.1.2
+//  Contains Dependency PerseusDarkModeSingle v1.1.3
 //
 //  Created by Mikhail Zhigulin in 7530.
 //
@@ -45,25 +45,23 @@ import Cocoa
 #endif
 
 #if os(iOS)
+public typealias Responder = UIResponder
 public typealias Color = UIColor
-public typealias ImageView = UIImageView
-public typealias Image = UIImage
 #elseif os(macOS)
+public typealias Responder = NSResponder
 public typealias Color = NSColor
-public typealias ImageView = NSImageView
-public typealias Image = NSImage
 #endif
 
-// MARK: - PerseusDarkModeSingle v1.1.2
+// MARK: - PerseusDarkModeSingle v1.1.3
 
 // MARK: - Constants
 
 public extension Notification.Name {
     static let MakeAppearanceUpNotification = Notification.Name("MakeAppearanceUpNotification")
-#if os(macOS)
+    #if os(macOS)
     static let AppleInterfaceThemeChangedNotification =
         Notification.Name("AppleInterfaceThemeChangedNotification")
-#endif
+    #endif
 }
 
 public let DARK_MODE_USER_CHOICE_KEY = "DarkModeUserChoiceOptionKey"
@@ -85,17 +83,17 @@ public class AppearanceService {
 
     private(set) static var it = { AppearanceService() }()
     private init() {
-#if os(macOS)
+        #if os(macOS)
         AppearanceService.distributedNCenter.addObserver(
             self,
             selector: #selector(interfaceModeChanged),
             name: .AppleInterfaceThemeChangedNotification,
             object: nil
         )
-#endif
+        #endif
     }
 
-#if os(macOS)
+    #if os(macOS)
     @objc internal func interfaceModeChanged() {
         if #available(macOS 10.14, *) {
             AppearanceService.processAppearanceOSDidChange()
@@ -105,30 +103,30 @@ public class AppearanceService {
     @available(macOS 10.14, *)
     public static var defaultDarkAppearanceOS: NSAppearance.Name = .darkAqua
     public static var defaultLightAppearanceOS: NSAppearance.Name = .aqua
-#endif
+    #endif
 
     public static var isEnabled: Bool { return hidden_isEnabled }
 
-#if DEBUG && os(macOS)
+    #if DEBUG && os(macOS)
     /// Used for mocking DistributedNotificationCenter in unit testing.
     public static var distributedNCenter: NotificationCenterProtocol =
         DistributedNotificationCenter.default
-#elseif os(macOS)
+    #elseif os(macOS)
     /// Default Distributed NotificationCenter.
     public static var distributedNCenter = DistributedNotificationCenter.default
-#endif
+    #endif
 
-#if DEBUG // Isolated for unit testing
+    #if DEBUG // Isolated for unit testing
     /// Used for mocking NotificationCenter in unit testing.
     public static var nCenter: NotificationCenterProtocol = NotificationCenter.default
     /// Used for mocking UserDefaults in unit testing.
     public static var ud: UserDefaultsProtocol = UserDefaults.standard
-#else
+    #else
     /// Default NotificationCenter.
     public static var nCenter = NotificationCenter.default
     /// Default UserDefaults.
     public static var ud = UserDefaults.standard
-#endif
+    #endif
 
     public static var DarkModeUserChoice: DarkModeOption {
         get {
@@ -175,7 +173,7 @@ public class AppearanceService {
         hidden_changeManually = false
     }
 
-#if os(iOS)
+    #if os(iOS)
     @available(iOS 13.0, *)
     public static func processTraitCollectionDidChange(
         _ previousTraitCollection: UITraitCollection?) {
@@ -187,13 +185,13 @@ public class AppearanceService {
 
         hidden_systemCalledMakeUp()
     }
-#elseif os(macOS)
+    #elseif os(macOS)
     @available(macOS 10.14, *)
     internal static func processAppearanceOSDidChange() {
         if hidden_changeManually { return }
         hidden_systemCalledMakeUp()
     }
-#endif
+    #endif
 
     // MARK: - Implementation helpers, privates and internals
 
@@ -221,7 +219,7 @@ public class AppearanceService {
     @available(iOS 13.0, macOS 10.14, *)
     internal static func overrideUserInterfaceStyleIfNeeded() {
         if hidden_changeManually == false { return }
-#if os(iOS) && compiler(>=5)
+        #if os(iOS) && compiler(>=5)
         guard let keyWindow = UIWindow.key else { return }
         var overrideStyle: UIUserInterfaceStyle = .unspecified
 
@@ -238,7 +236,7 @@ public class AppearanceService {
 
         keyWindow.overrideUserInterfaceStyle = overrideStyle
 
-#elseif os(macOS)
+        #elseif os(macOS)
         switch DarkModeUserChoice {
         case .auto:
             NSApplication.shared.appearance = nil
@@ -249,7 +247,7 @@ public class AppearanceService {
             NSApplication.shared.appearance =
                 NSAppearance(named: AppearanceService.defaultLightAppearanceOS)
         }
-#endif
+        #endif
     }
 }
 
@@ -268,7 +266,7 @@ public class DarkMode: NSObject {
 
     public var systemStyle: SystemStyle {
         if #available(iOS 13.0, macOS 10.14, *) {
-#if os(iOS)
+            #if os(iOS)
             guard let keyWindow = UIWindow.key else { return .unspecified }
 
             switch keyWindow.traitCollection.userInterfaceStyle {
@@ -282,14 +280,14 @@ public class DarkMode: NSObject {
             @unknown default:
                 return .unspecified
             }
-#elseif os(macOS)
+            #elseif os(macOS)
             if let isDark = UserDefaults.standard.string(forKey: "AppleInterfaceStyle"),
                 isDark == "Dark" {
                 return .dark
             } else {
                 return .light
             }
-#endif
+            #endif
         } else {
             return .unspecified
         }
@@ -311,7 +309,8 @@ public class DarkModeDecision {
     ///
     /// Dark Mode decision-making:
     ///
-    ///                    DarkModeOption
+    ///                  | DarkModeOption
+    ///     -------------+-----------------------
     ///     SystemStyle  | auto    | on   | off
     ///     -------------+---------+------+------
     ///     .unspecified | default | dark | light
@@ -489,12 +488,31 @@ extension UserDefaults: UserDefaultsProtocol { }
 extension NotificationCenter: NotificationCenterProtocol { }
 extension DarkMode: DarkModeProtocol { }
 
-// MARK: - PerseusUISystemKitSingle v1.1.0
+// MARK: - PerseusUISystemKitSingle v1.1.2
 
 // MARK: - Required Color Creator with 0 .. 255 format
 
 public func rgba255(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat = 1.0)
     -> Color { return Color(red: red/255, green: green/255, blue: blue/255, alpha: alpha) }
+
+/// Used to exctruct RGBA of the UIColor instance
+public extension Color {
+    /// Returns red, green, and blue from 0 to 255, and alpha from 0.0 to 1.0.
+    ///
+    /// ```swift
+    /// let rgba = UIColor.red.RGBA255
+    /// ```
+    var RGBA255: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (red*255, green*255, blue*255, alpha)
+    }
+}
 
 // MARK: - System Colors Requirements
 
@@ -572,7 +590,7 @@ public protocol SystemColorProtocol {
     /// - Dark: 172, 142, 104
     static var perseusBrown: Color { get }
 
-// MARK: - System Gray Colors
+    // MARK: - System Gray Colors
 
     /// Gray is .systemGray
     ///
@@ -728,7 +746,7 @@ extension Color: SystemColorProtocol {
 
 public protocol SemanticColorProtocol {
 
-// MARK: - FOREGROUND CONTENT
+    // MARK: - FOREGROUND CONTENT
 
     // MARK: - Label Colors
 
@@ -812,7 +830,7 @@ public protocol SemanticColorProtocol {
     /// - Dark: 118, 118, 128, 0.18
     static var quaternarySystemFillPerseus: Color { get }
 
-// MARK: - BACKGROUND CONTENT
+    // MARK: - BACKGROUND CONTENT
 
     // MARK: - Standard
 
@@ -970,11 +988,13 @@ extension Color: SemanticColorProtocol {
 
 // MARK: - Image View with Dynamic Apperance Changing
 
-public class DarkModeImageView: ImageView {
+#if os(iOS)
 
-// swiftlint:disable valid_ibinspectable
+@IBDesignable
+public class DarkModeImageView: UIImageView {
+
     @IBInspectable
-    var imageLight: Image? {
+    var imageLight: UIImage? {
         didSet {
             light = imageLight
             image = DarkMode.style == .light ? light : dark
@@ -982,18 +1002,17 @@ public class DarkModeImageView: ImageView {
     }
 
     @IBInspectable
-    var imageDark: Image? {
+    var imageDark: UIImage? {
         didSet {
             dark = imageDark
             image = DarkMode.style == .light ? light : dark
         }
     }
-// swiftlint:enable valid_ibinspectable
 
     private(set) var darkModeObserver: DarkModeObserver?
 
-    private(set) var light: Image?
-    private(set) var dark: Image?
+    private(set) var light: UIImage?
+    private(set) var dark: UIImage?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -1009,9 +1028,11 @@ public class DarkModeImageView: ImageView {
         darkModeObserver = DarkModeObserver { style in
             self.image = style == .light ? self.light : self.dark
         }
+
+        image = DarkMode.style == .light ? self.light : self.dark
     }
 
-    public func configure(_ light: Image?, _ dark: Image?) {
+    public func configure(_ light: UIImage?, _ dark: UIImage?) {
         self.light = light
         self.dark = dark
 
@@ -1022,3 +1043,148 @@ public class DarkModeImageView: ImageView {
         image = DarkMode.style == .light ? self.light : self.dark
     }
 }
+
+#elseif os(macOS)
+
+public enum ScaleImageViewMacOS: Int, CustomStringConvertible {
+
+    case scaleNone                  = 0 // No scale at all
+    case axesIndependently          = 1 // Aspect Fill
+    case proportionallyUpOrDown     = 2 // Aspect Fit
+    case proportionallyDown         = 3 // Center Top
+    case proportionallyClipToBounds = 4 // Aspect Fill with cliping to ImageView bounds
+
+    public var description: String {
+        switch self {
+        case .scaleNone:
+            return "As is, no scaling."
+        case .axesIndependently:
+            return "Aspect Fill."
+        case .proportionallyUpOrDown:
+            return "Aspect Fit."
+        case .proportionallyDown:
+            return "Center Top."
+        case .proportionallyClipToBounds:
+            return "Aspect Fill cliped to bounds."
+        }
+    }
+
+    public var value: NSImageScaling {
+        switch self {
+        case .scaleNone:
+            return .scaleNone
+        case .axesIndependently:
+            return .scaleAxesIndependently
+        case .proportionallyUpOrDown:
+            return .scaleProportionallyUpOrDown
+        case .proportionallyDown:
+            return .scaleProportionallyDown
+        case .proportionallyClipToBounds:
+            return .scaleNone
+        }
+    }
+}
+
+@IBDesignable
+public class DarkModeImageView: NSImageView {
+
+    @IBInspectable
+    var imageLight: NSImage? {
+        didSet {
+            image = DarkMode.style == .light ? imageLight : imageDark
+        }
+    }
+
+    @IBInspectable
+    var imageDark: NSImage? {
+        didSet {
+            image = DarkMode.style == .light ? imageLight : imageDark
+        }
+    }
+
+    @IBInspectable
+    var aspectFillClipToBounds: Bool = false
+
+    var customScale: ScaleImageViewMacOS = .scaleNone {
+        didSet {
+            guard customScale != .proportionallyClipToBounds else {
+
+                self.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+                self.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+
+                self.aspectFillClipToBounds = true
+                self.imageScaling = .scaleNone
+
+                return
+            }
+
+            self.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+            self.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+
+            self.aspectFillClipToBounds = false
+            self.imageScaling = customScale.value
+        }
+    }
+
+    private(set) var darkModeObserver: DarkModeObserver?
+
+    override public func awakeFromNib() {
+        guard aspectFillClipToBounds else { return }
+
+        self.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        self.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+
+        self.imageScaling = .scaleNone
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configure()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configure()
+    }
+
+    public func configure(_ light: NSImage?, _ dark: NSImage?) {
+        configure()
+
+        self.imageLight = light
+        self.imageDark = dark
+    }
+
+    private func configure() {
+        darkModeObserver = DarkModeObserver { style in
+            self.image = style == .light ? self.imageLight : self.imageDark
+        }
+    }
+
+    override public func draw(_ dirtyRect: NSRect) {
+        guard aspectFillClipToBounds, let image = self.image else {
+            super.draw(dirtyRect)
+            return
+        }
+
+        // Get variables
+
+        let viewWidth = self.bounds.size.width
+        let viewHeight = self.bounds.size.height
+
+        let width = image.size.width
+        let height = image.size.height
+
+        // https://study.com/learn/lesson/what-is-aspect-ratio.html
+        let imageViewRatio = viewWidth / viewHeight
+        let imageRatio = width / height
+
+        // Scale image of the ImageView with clipping to bounds
+
+        image.size.width = imageRatio < imageViewRatio ? viewWidth : viewHeight * imageRatio
+        image.size.height = imageRatio < imageViewRatio ? viewWidth / imageRatio : viewHeight
+
+        super.draw(dirtyRect)
+    }
+}
+
+#endif
