@@ -1,7 +1,7 @@
 // swift-tools-version:4.2
 
 /* Package.swift
- Version: 1.1.2
+ Version: 1.1.3
  
  Created by Mikhail Zhigulin in 7530.
 
@@ -25,7 +25,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusDarkMode.git",
-            .exact("1.1.3"))
+            .exact("1.1.4"))
     ],
     targets: [
         .target(
