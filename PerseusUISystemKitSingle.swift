@@ -1,8 +1,8 @@
 //
 //  PerseusUISystemKitSingle.swift
-//  Version: 1.1.2
+//  Version: 1.1.3
 //
-//  Contains Dependency PerseusDarkModeSingle v1.1.3
+//  Contains Dependency PerseusDarkModeSingle v1.1.4
 //
 //  Created by Mikhail Zhigulin in 7530.
 //
@@ -52,17 +52,20 @@ public typealias Responder = NSResponder
 public typealias Color = NSColor
 #endif
 
-// MARK: - PerseusDarkModeSingle v1.1.3
+// MARK: - PerseusDarkModeSingle v1.1.4
 
-// MARK: - Constants
+// MARK: - Notifications
 
 public extension Notification.Name {
-    static let MakeAppearanceUpNotification = Notification.Name("MakeAppearanceUpNotification")
+    static let MakeAppearanceUpNotification =
+        Notification.Name("MakeAppearanceUpNotification")
     #if os(macOS)
     static let AppleInterfaceThemeChangedNotification =
         Notification.Name("AppleInterfaceThemeChangedNotification")
     #endif
 }
+
+// MARK: - Constants
 
 public let DARK_MODE_USER_CHOICE_KEY = "DarkModeUserChoiceOptionKey"
 public let DARK_MODE_USER_CHOICE_DEFAULT = DarkModeOption.auto
@@ -73,7 +76,7 @@ public let OBSERVERED_VARIABLE_NAME = "styleObservable"
 
 // swiftlint:disable identifier_name
 public extension Responder {
-    var DarkMode: DarkModeProtocol { return AppearanceService.shared }
+    var DarkMode: DarkMode { return AppearanceService.shared }
 }
 // swiftlint:enable identifier_name
 
@@ -107,26 +110,15 @@ public class AppearanceService {
 
     public static var isEnabled: Bool { return hidden_isEnabled }
 
-    #if DEBUG && os(macOS)
-    /// Used for mocking DistributedNotificationCenter in unit testing.
-    public static var distributedNCenter: NotificationCenterProtocol =
-        DistributedNotificationCenter.default
-    #elseif os(macOS)
+    #if os(macOS)
     /// Default Distributed NotificationCenter.
     public static var distributedNCenter = DistributedNotificationCenter.default
     #endif
 
-    #if DEBUG // Isolated for unit testing
-    /// Used for mocking NotificationCenter in unit testing.
-    public static var nCenter: NotificationCenterProtocol = NotificationCenter.default
-    /// Used for mocking UserDefaults in unit testing.
-    public static var ud: UserDefaultsProtocol = UserDefaults.standard
-    #else
     /// Default NotificationCenter.
     public static var nCenter = NotificationCenter.default
     /// Default UserDefaults.
     public static var ud = UserDefaults.standard
-    #endif
 
     public static var DarkModeUserChoice: DarkModeOption {
         get {
@@ -212,7 +204,6 @@ public class AppearanceService {
 
     internal static func recalculateStyleIfNeeded() {
         let actualStyle = DarkModeDecision.calculate(DarkModeUserChoice, shared.systemStyle)
-
         if shared.hidden_style != actualStyle { shared.hidden_style = actualStyle }
     }
 
@@ -254,6 +245,7 @@ public class AppearanceService {
 // MARK: - Dark Mode
 
 public class DarkMode: NSObject {
+
     // MARK: - The App's current Appearance Style
 
     public var style: AppearanceStyle { return hidden_style }
@@ -344,6 +336,7 @@ public class DarkModeDecision {
 // MARK: - Appearance Style Observering
 
 public class DarkModeObserver: NSObject {
+
     public var action: ((_ newStyle: AppearanceStyle) -> Void)?
     private(set) var objectToObserve = AppearanceService.shared
 
@@ -462,33 +455,7 @@ extension UIWindow {
 }
 #endif
 
-// MARK: - Used only for unit testing purpose
-
-public protocol NotificationCenterProtocol {
-    func addObserver(_ observer: Any,
-                     selector aSelector: Selector,
-                     name aName: NSNotification.Name?,
-                     object anObject: Any?)
-    func post(name aName: NSNotification.Name, object anObject: Any?)
-}
-
-public protocol UserDefaultsProtocol {
-    func valueExists(forKey key: String) -> Bool
-    func integer(forKey defaultName: String) -> Int
-    func setValue(_ value: Any?, forKey key: String)
-}
-
-public protocol DarkModeProtocol {
-    var style: AppearanceStyle { get }
-    var systemStyle: SystemStyle { get }
-    var styleObservable: Int { get }
-}
-
-extension UserDefaults: UserDefaultsProtocol { }
-extension NotificationCenter: NotificationCenterProtocol { }
-extension DarkMode: DarkModeProtocol { }
-
-// MARK: - PerseusUISystemKitSingle v1.1.2
+// MARK: - PerseusUISystemKitSingle v1.1.3
 
 // MARK: - Required Color Creator with 0 .. 255 format
 
