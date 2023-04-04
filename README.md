@@ -1,7 +1,7 @@
 # Perseus UI System Kit
 
 [![Actions Status](https://github.com/perseusrealdeal/PerseusUISystemKit/actions/workflows/main.yml/badge.svg)](https://github.com/perseusrealdeal/PerseusUISystemKit/actions)
-[![Version](https://img.shields.io/badge/Version-1.1.2-informational.svg)](/Package.swift)
+[![Version](https://img.shields.io/badge/Version-1.1.3-informational.svg)](/Package.swift)
 [![Pod](https://img.shields.io/badge/Pod-1.1.2-informational.svg)](/PerseusUISystemKit.podspec)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%209.3+,%20macOS%2010.10+-orange.svg)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-red.svg)](https://docs.swift.org/swift-book/RevisionHistory/RevisionHistory.html)
@@ -16,7 +16,7 @@
 
 ## Dependencies
 
-[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.3-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.3)
+[![PerseusDarkMode](http://img.shields.io/:PerseusDarkMode-1.1.4-green.svg)](https://github.com/perseusrealdeal/PerseusDarkMode/tree/1.1.4)
 
 ## Demo Apps and Others
 
@@ -37,7 +37,7 @@
 
 ## First-party software
 
-- [Perseus Dark Mode](https://github.com/perseusrealdeal/PerseusDarkMode.git) / [1.1.3](https://github.com/perseusrealdeal/perseusdarkmode/releases/tag/1.1.3)
+- [Perseus Dark Mode](https://github.com/perseusrealdeal/PerseusDarkMode.git) / [1.1.4](https://github.com/perseusrealdeal/perseusdarkmode/releases/tag/1.1.4)
 
 ## Third-party software
 
@@ -64,8 +64,8 @@ end
 Cartfile should contain:
 
 ```carthage
-github "perseusrealdeal/PerseusDarkMode" == 1.1.3
-github "perseusrealdeal/PerseusUISystemKit" == 1.1.2
+github "perseusrealdeal/PerseusDarkMode" == 1.1.4
+github "perseusrealdeal/PerseusUISystemKit" == 1.1.3
 ```
 Some Carthage usage tips placed [here](https://gist.github.com/perseusrealdeal/8951b10f4330325df6347aaaa79d3cf2).
 
@@ -76,7 +76,7 @@ Some Carthage usage tips placed [here](https://gist.github.com/perseusrealdeal/8
 ```swift
 dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusUISystemKit.git",
-            .exact("1.1.2"))
+            .exact("1.1.3"))
     ],
 ```
 
