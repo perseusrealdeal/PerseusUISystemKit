@@ -26,7 +26,7 @@ import PerseusDarkMode
 public class DarkModeImageView: UIImageView {
 
     @IBInspectable
-    var imageLight: UIImage? {
+    public var imageLight: UIImage? {
         didSet {
             light = imageLight
             image = DarkMode.style == .light ? light : dark
@@ -34,7 +34,7 @@ public class DarkModeImageView: UIImageView {
     }
 
     @IBInspectable
-    var imageDark: UIImage? {
+    public var imageDark: UIImage? {
         didSet {
             dark = imageDark
             image = DarkMode.style == .light ? light : dark
@@ -121,23 +121,23 @@ public enum ScaleImageViewMacOS: Int, CustomStringConvertible {
 public class DarkModeImageView: NSImageView {
 
     @IBInspectable
-    var imageLight: NSImage? {
+    public var imageLight: NSImage? {
         didSet {
             image = DarkMode.style == .light ? imageLight : imageDark
         }
     }
 
     @IBInspectable
-    var imageDark: NSImage? {
+    public var imageDark: NSImage? {
         didSet {
             image = DarkMode.style == .light ? imageLight : imageDark
         }
     }
 
     @IBInspectable
-    var aspectFillClipToBounds: Bool = false
+    public var aspectFillClipToBounds: Bool = false
 
-    var customScale: ScaleImageViewMacOS = .scaleNone {
+    public var customScale: ScaleImageViewMacOS = .scaleNone {
         didSet {
             guard customScale != .proportionallyClipToBounds else {
 
