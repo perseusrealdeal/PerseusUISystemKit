@@ -48,11 +48,17 @@ public class DarkModeImageView: UIImageView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
@@ -161,6 +167,9 @@ public class DarkModeImageView: NSImageView {
     private(set) var darkModeObserver: DarkModeObserver?
 
     override public func awakeFromNib() {
+
+        log.message("[\(type(of: self))].\(#function)")
+
         guard aspectFillClipToBounds else { return }
 
         self.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
@@ -171,11 +180,17 @@ public class DarkModeImageView: NSImageView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
