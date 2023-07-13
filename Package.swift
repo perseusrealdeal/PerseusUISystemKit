@@ -25,7 +25,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/perseusrealdeal/PerseusDarkMode.git",
-            .branch("hotfixes"))
+            .branch("1.1.5"))
     ],
     targets: [
         .target(
