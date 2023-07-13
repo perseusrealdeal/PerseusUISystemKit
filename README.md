@@ -26,7 +26,7 @@
 
 # In Brief
 
-> This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image. Features of this library can be used to create Dark Mode sensitive UI both for iOS and macOS apps.
+> This library brings a developer some modern but simple tools like system and semantic colors, and dynamic image. Features of this library can be used to create Dark Mode sensitive UI for both macOS and iOS apps as well.
 
 # Reqirements
 
@@ -74,7 +74,7 @@ target "ProjectTarget" do
 end
 ```
 
-### Swift Package Manager
+## Swift Package Manager
 
 - As a package dependency Package.swift should contain the following statements:
 
@@ -172,7 +172,9 @@ class MainViewController: UIViewController {
 }
 ```
 
-There is another way to be notified of Dark Mode changed, KVO. To learn have a look at [sample](https://github.com/perseusrealdeal/macos.darkmode.discovery) directly.
+There is another way to be notified of Dark Mode—KVO. 
+
+> [`DarkModeImageView`](https://github.com/perseusrealdeal/PerseusUISystemKit/blob/master/Sources/PerseusUISystemKit/Classes/DarkModeImageView.swift) class is an expressive sample of Dark Mode KVO usage for both macOS and iOS as well.
 
 # License MIT
 
