@@ -1,8 +1,8 @@
 //
 //  PerseusUISystemKitSingle.swift
-//  Version: 1.1.3
+//  Version: 1.1.4
 //
-//  Contains Dependency PerseusDarkModeSingle v1.1.4
+//  Contains Dependency PerseusDarkModeSingle v1.1.5
 //
 //  Created by Mikhail Zhigulin in 7530.
 //
@@ -52,7 +52,7 @@ public typealias Responder = NSResponder
 public typealias Color = NSColor
 #endif
 
-// MARK: - PerseusDarkModeSingle v1.1.4
+// MARK: - PerseusDarkModeSingle v1.1.5
 
 // MARK: - Notifications
 
@@ -202,7 +202,7 @@ public class AppearanceService {
         nCenter.post(name: .MakeAppearanceUpNotification, object: nil)
     }
 
-    internal static func recalculateStyleIfNeeded() {
+    public static func recalculateStyleIfNeeded() {
         let actualStyle = DarkModeDecision.calculate(DarkModeUserChoice, shared.systemStyle)
         if shared.hidden_style != actualStyle { shared.hidden_style = actualStyle }
     }
@@ -455,7 +455,7 @@ extension UIWindow {
 }
 #endif
 
-// MARK: - PerseusUISystemKitSingle v1.1.3
+// MARK: - PerseusUISystemKitSingle v1.1.4
 
 // MARK: - Required Color Creator with 0 .. 255 format
 

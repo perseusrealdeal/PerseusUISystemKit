@@ -26,7 +26,7 @@ import PerseusDarkMode
 public class DarkModeImageView: UIImageView {
 
     @IBInspectable
-    var imageLight: UIImage? {
+    public var imageLight: UIImage? {
         didSet {
             light = imageLight
             image = DarkMode.style == .light ? light : dark
@@ -34,7 +34,7 @@ public class DarkModeImageView: UIImageView {
     }
 
     @IBInspectable
-    var imageDark: UIImage? {
+    public var imageDark: UIImage? {
         didSet {
             dark = imageDark
             image = DarkMode.style == .light ? light : dark
@@ -48,11 +48,17 @@ public class DarkModeImageView: UIImageView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
@@ -121,23 +127,23 @@ public enum ScaleImageViewMacOS: Int, CustomStringConvertible {
 public class DarkModeImageView: NSImageView {
 
     @IBInspectable
-    var imageLight: NSImage? {
+    public var imageLight: NSImage? {
         didSet {
             image = DarkMode.style == .light ? imageLight : imageDark
         }
     }
 
     @IBInspectable
-    var imageDark: NSImage? {
+    public var imageDark: NSImage? {
         didSet {
             image = DarkMode.style == .light ? imageLight : imageDark
         }
     }
 
     @IBInspectable
-    var aspectFillClipToBounds: Bool = false
+    public var aspectFillClipToBounds: Bool = false
 
-    var customScale: ScaleImageViewMacOS = .scaleNone {
+    public var customScale: ScaleImageViewMacOS = .scaleNone {
         didSet {
             guard customScale != .proportionallyClipToBounds else {
 
@@ -161,6 +167,9 @@ public class DarkModeImageView: NSImageView {
     private(set) var darkModeObserver: DarkModeObserver?
 
     override public func awakeFromNib() {
+
+        log.message("[\(type(of: self))].\(#function)")
+
         guard aspectFillClipToBounds else { return }
 
         self.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
@@ -171,11 +180,17 @@ public class DarkModeImageView: NSImageView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
+        log.message("[\(type(of: self))].\(#function)")
+
         configure()
     }
 
